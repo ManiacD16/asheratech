@@ -82,7 +82,7 @@ const config: Config = {
         card: '0 22px 60px -38px rgba(24, 31, 56, 0.28)',
       },
       animation: {
-        marquee: 'marquee 28s linear infinite',
+        marquee: 'marquee 40s linear infinite',
         'marquee-reverse': 'marquee-reverse 32s linear infinite',
         'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
       },
