@@ -15,7 +15,7 @@ import { StackDecisionPanel } from '@/components/sections/stack-decision-panel';
 import { BlockchainNetworkBackground } from '@/components/sections/blockchain-network-background';
 
 const blockchainCategory = 'Blockchain & digital assets';
-
+// 
 export function Technology() {
   const root = useRef<HTMLElement>(null);
 
