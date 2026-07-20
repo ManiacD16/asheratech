@@ -67,6 +67,7 @@ export function Logo({
               : 'text-muted group-hover:text-foreground/70',
           )}
         >
+          {/*  */}
           Your Legacy compile into innovation
         </span>
       </span>
