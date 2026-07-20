@@ -203,7 +203,7 @@ export function Hero() {
                   data-hero-line
                   className="block"
                 >
-                  Blockchain systems.
+                  Complex ideas.
                 </span>
               </span>
 
