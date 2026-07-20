@@ -257,10 +257,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div
-            ref={stage}
-            className="will-change-transform lg:-mt-8 xl:-mt-10"
-          >
+          <div ref={stage} className="will-change-transform lg:-mt-10 xl:-mt-72">
             <HeroStage />
           </div>
         </div>
