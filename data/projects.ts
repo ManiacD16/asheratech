@@ -97,7 +97,7 @@ export const projects: Project[] = [
     category: 'Mobile product',
     year: '2025',
     summary:
-      'A calm mobile experience for appointments, care tasks and progress—designed around moments of uncertainty.',
+      'A calm mobile experience for appointments, care tasks and progress-designed around moments of uncertainty.',
     challenge:
       'Patients needed a simpler way to prepare for appointments, understand next actions and stay connected to care without navigating fragmented messages and portals.',
     approach: [

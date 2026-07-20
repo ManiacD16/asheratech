@@ -1,4 +1,4 @@
-# Asheratech — Awwwards-Style Design Review
+# Asheratech - Awwwards-Style Design Review
 
 This is an internal, subjective design-quality audit rather than an official Awwwards score.
 

@@ -52,7 +52,7 @@ export default async function InsightPage({
   return (
     <>
       <article>
-        <header className="relative overflow-hidden border-b border-border pb-16 pt-32 md:pb-24 md:pt-40 lg:pt-44">
+        <header className="relative overflow-hidden border-b border-border pb-12 pt-28 md:pb-16 md:pt-32 lg:pt-36">
           <div className="grid-lines absolute inset-0 opacity-30" />
           <div className="noise" />
           <span
@@ -69,7 +69,7 @@ export default async function InsightPage({
               >
                 <ArrowLeft className="h-4 w-4" /> All insights
               </Link>
-              <div className="mt-12 max-w-5xl">
+              <div className="mt-8 max-w-5xl">
                 <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
                   <span>{insight.category}</span>
                   <span className="h-1 w-1 rounded-full bg-accent" />
@@ -88,7 +88,7 @@ export default async function InsightPage({
           </Container>
         </header>
 
-        <section data-chapter="Article" className="py-20 md:py-28">
+        <section data-chapter="Article" className="py-14 md:py-18">
           <Container>
             <div className="grid gap-12 lg:grid-cols-[0.62fr_1.38fr] lg:gap-24">
               <Reveal>
@@ -115,7 +115,7 @@ export default async function InsightPage({
           </Container>
         </section>
 
-        <section data-chapter="Read next" className="pb-20 md:pb-28">
+        <section data-chapter="Read next" className="pb-14 md:pb-18">
           <Container>
             <Reveal>
               <Link

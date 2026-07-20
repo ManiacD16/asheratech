@@ -7,7 +7,7 @@ export function FinalCta() {
   return (
     <section
       data-chapter="Contact"
-      className="relative overflow-hidden bg-navy-900 py-24 text-white md:py-32 lg:py-44"
+      className="relative overflow-hidden bg-navy-900 py-16 text-white md:py-20 lg:py-24"
     >
       <div className="noise" />
       <div className="grid-lines absolute inset-0 opacity-[0.055]" />
@@ -25,7 +25,7 @@ export function FinalCta() {
           <Link
             href="/contact"
             data-cursor="Start"
-            className="group block border-y border-white/15 py-10 md:py-14"
+            className="group block border-y border-white/15 py-8 md:py-10"
           >
             <div className="flex items-center justify-between gap-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
               <span className="flex items-center gap-3">
@@ -37,7 +37,7 @@ export function FinalCta() {
               </span>
               <span className="hidden sm:block">New business / 2026</span>
             </div>
-            <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="max-w-5xl text-[clamp(3.4rem,8vw,8.5rem)] font-semibold leading-[0.86] tracking-[-0.075em] text-white">
                   Have a complex
@@ -46,7 +46,7 @@ export function FinalCta() {
                     product to build?
                   </span>
                 </h2>
-                <p className="mt-8 max-w-2xl text-base leading-8 text-white/[0.58] md:text-lg">
+                <p className="mt-6 max-w-2xl text-base leading-8 text-white/[0.58] md:text-lg">
                   Bring us the ambition, constraints and unanswered questions.
                   We’ll turn them into a focused path forward.
                 </p>

@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Check } from 'lucide-react';
 import { processSteps } from '@/data/site';
 import { Container } from '@/components/ui/container';
+import { ProcessSignal } from '@/components/sections/process-signal';
 
 if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
@@ -72,22 +73,29 @@ export function Process() {
         FLOW
       </span>
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-end lg:gap-24">
+        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start lg:gap-20 xl:gap-24">
           <div>
             <span className="eyebrow text-white/[0.48]">How we work</span>
-            <h2 className="text-[clamp(2.8rem,6vw,6rem)] font-semibold leading-[0.95] tracking-[-0.06em] text-white">
+
+            <h2 className="max-w-[620px] text-[clamp(2.8rem,6vw,6rem)] font-semibold leading-[0.95] tracking-[-0.06em] text-white">
               A clear path through{' '}
               <span className="text-signal">complex delivery.</span>
             </h2>
           </div>
-          <p className="max-w-2xl text-base leading-8 text-white/[0.58] md:text-lg">
-            Four connected phases keep product, experience and engineering
-            decisions moving together from the first brief through real-world
-            scale.
-          </p>
+
+          <div className="lg:pt-4">
+            <div className="hidden lg:block">
+              <ProcessSignal />
+            </div>
+
+            <p className="max-w-2xl text-base leading-8 text-white/[0.58] md:text-lg lg:mt-7">
+              Four connected phases keep product, experience and engineering decisions
+              moving together from the first brief through real-world scale.
+            </p>
+          </div>
         </div>
 
-        <div className="relative mt-20 lg:mt-28">
+        <div className="relative mt-16 lg:mt-20">
           <div className="absolute bottom-10 left-[17px] top-10 w-px bg-white/[0.12] md:left-[23px]" />
           <div
             ref={line}

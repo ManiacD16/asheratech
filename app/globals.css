@@ -20,7 +20,7 @@
   --frost: #f2f5fa;
   --signal: #00e05c;
   --page-gutter: clamp(1.25rem, 4vw, 4rem);
-  --section-space: clamp(6.5rem, 12vw, 11rem);
+  --section-space: clamp(4rem, 7vw, 6rem);
 }
 
 .dark {
@@ -117,12 +117,12 @@ svg {
 
 @layer components {
   .section-shell {
-    @apply relative py-24 md:py-32 lg:py-44;
+    @apply relative py-16 md:py-20 lg:py-24;
   }
 
-  .eyebrow {
-    @apply mb-6 inline-flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.19em] text-muted;
-  }
+.eyebrow {
+  @apply mb-4 inline-flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.19em] text-muted;
+}
 
   .eyebrow::before {
     content: '';

@@ -66,10 +66,10 @@ When the webhook is not configured, the form displays a direct email fallback ra
 
 ## Content model
 
-- `data/projects.ts` — case-study data
-- `data/services.ts` — service practices and focused capabilities
-- `data/insights.ts` — insight articles
-- `data/site.ts` — navigation, company details, process and technologies
+- `data/projects.ts` - case-study data
+- `data/services.ts` - service practices and focused capabilities
+- `data/insights.ts` - insight articles
+- `data/site.ts` - navigation, company details, process and technologies
 
 The included work is labeled as representative/confidential. Replace it with approved client names, verified outcomes, permissions and final imagery before public launch.
 

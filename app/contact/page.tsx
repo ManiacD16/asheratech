@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/container';
 import { PageIntro } from '@/components/ui/page-intro';
 import { Reveal } from '@/components/motion/reveal';
 import { ContactForm } from '@/components/forms/contact-form';
+import { ProjectBriefSystem } from '@/components/sections/project-brief-system';
 
 export const metadata: Metadata = createMetadata({
   title: 'Start a Project',
@@ -26,6 +27,7 @@ export default function ContactPage() {
           </>
         }
         description="Share the opportunity, constraints and urgency. A useful first conversation starts with context—not a sales script."
+        visual={<ProjectBriefSystem />}
       />
       <section data-chapter="Project inquiry" className="section-shell">
         <Container>

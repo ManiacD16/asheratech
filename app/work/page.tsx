@@ -33,11 +33,11 @@ export default function WorkPage() {
       />
       <section data-chapter="Work archive" className="section-shell">
         <Container>
-          <div className="grid gap-x-6 gap-y-20 lg:grid-cols-2 lg:gap-y-28">
+          <div className="grid gap-x-6 gap-y-12 lg:grid-cols-2 lg:gap-y-18">
             {projects.map((project, index) => (
               <div
                 key={project.slug}
-                className={index % 2 === 1 ? 'lg:mt-24' : ''}
+                className={index % 2 === 1 ? 'lg:mt-14' : ''}
               >
                 <ProjectCard
                   project={project}
@@ -48,7 +48,7 @@ export default function WorkPage() {
               </div>
             ))}
           </div>
-          <p className="mt-24 max-w-2xl border-l-2 border-accent pl-5 text-sm leading-7 text-muted">
+          <p className="mt-16 max-w-2xl border-l-2 border-accent pl-5 text-sm leading-7 text-muted">
             Some engagements are represented without client names or
             confidential performance data. The focus is the problem, product
             decisions and delivery approach.

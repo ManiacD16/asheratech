@@ -1,4 +1,4 @@
-# Asheratech Portfolio — Final QA Report
+# Asheratech Portfolio - Final QA Report
 
 **QA date:** 15 July 2026  
 **Test target:** Next.js production build served with `next start`  
@@ -29,7 +29,7 @@ The intentional `/qa-not-found` test route returned HTTP 404 and rendered the cu
 12. `/insights/hide-blockchain-complexity-not-consequence`
 13. `/contact`
 14. `/privacy`
-15. `/qa-not-found` — expected 404
+15. `/qa-not-found` - expected 404
 
 ### Responsive matrix
 
@@ -154,13 +154,13 @@ CONTACT_WEBHOOK_URL=https://your-secure-form-endpoint.example
 
 ## Screenshot directories
 
-- `screenshots/desktop` — all 15 routes
-- `screenshots/tablet` — all 15 routes
-- `screenshots/mobile` — all 15 routes
-- `screenshots/dark-desktop` — Home, Work, Services, Contact
-- `screenshots/dark-mobile` — Home, Work, Services, Contact
-- `screenshots/full-page-desktop` — key template coverage
-- `screenshots/full-page-mobile` — key template coverage
+- `screenshots/desktop` - all 15 routes
+- `screenshots/tablet` - all 15 routes
+- `screenshots/mobile` - all 15 routes
+- `screenshots/dark-desktop` - Home, Work, Services, Contact
+- `screenshots/dark-mobile` - Home, Work, Services, Contact
+- `screenshots/full-page-desktop` - key template coverage
+- `screenshots/full-page-mobile` - key template coverage
 
 ## Release recommendation
 

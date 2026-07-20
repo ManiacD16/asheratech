@@ -8,6 +8,7 @@ import { Container } from '@/components/ui/container';
 import { ProjectVisual } from '@/components/project/project-visual';
 import { Reveal } from '@/components/motion/reveal';
 import { FinalCta } from '@/components/sections/final-cta';
+import { ProjectHeroSystem } from '@/components/project/project-hero-system';
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -42,30 +43,41 @@ export default async function ProjectPage({
   return (
     <>
       <article>
-        <header className="relative overflow-hidden pb-14 pt-32 md:pb-20 md:pt-40 lg:pt-44">
+        <header className="relative overflow-hidden pb-12 pt-28 md:pb-16 md:pt-32 lg:pb-20 lg:pt-36">
           <div className="grid-lines absolute inset-0 opacity-30" />
+
           <Container className="relative">
             <Reveal>
               <Link
                 href="/work"
-                className="mb-12 inline-flex min-h-11 items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted transition hover:text-foreground"
+                className="mb-8 inline-flex min-h-11 items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted transition hover:text-foreground md:mb-10"
               >
-                <ArrowLeft className="h-4 w-4" /> All work
+                <ArrowLeft className="h-4 w-4" />
+                All work
               </Link>
-              <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+
+              <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(440px,.98fr)] lg:items-start lg:gap-14 xl:gap-20">
                 <div>
                   <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
                     <span>{project.category}</span>
                     <span>/</span>
                     <span>{project.year}</span>
                   </div>
-                  <h1 className="mt-5 max-w-5xl text-hero font-semibold text-foreground">
+
+                  <h1 className="mt-5 max-w-[8.5ch] text-hero font-semibold text-foreground">
                     {project.title}
                   </h1>
                 </div>
-                <p className="max-w-xl text-lg leading-8 text-muted md:text-xl md:leading-9">
-                  {project.summary}
-                </p>
+
+                <div className="lg:pt-1">
+                  <div className="hidden lg:block">
+                    <ProjectHeroSystem project={project} />
+                  </div>
+
+                  <p className="max-w-2xl text-lg leading-8 text-muted md:text-xl md:leading-9 lg:mt-7">
+                    {project.summary}
+                  </p>
+                </div>
               </div>
             </Reveal>
           </Container>
@@ -140,7 +152,7 @@ export default async function ProjectPage({
                     {project.challenge}
                   </p>
                 </Reveal>
-                <div className="mt-20">
+                <div className="mt-14">
                   <Reveal>
                     <span className="eyebrow">The approach</span>
                     <h2 className="text-title font-semibold text-foreground">
@@ -170,7 +182,7 @@ export default async function ProjectPage({
 
         <section
           data-chapter="Outcomes"
-          className="bg-surface/55 py-20 md:py-28"
+          className="bg-surface/55 py-14 md:py-18"
         >
           <Container>
             <Reveal>
@@ -189,7 +201,7 @@ export default async function ProjectPage({
                   </div>
                 ))}
               </div>
-              <div className="mt-14 grid gap-8 lg:grid-cols-[0.65fr_1.35fr]">
+              <div className="mt-10 grid gap-8 lg:grid-cols-[0.65fr_1.35fr]">
                 <span className="eyebrow h-fit">The outcome</span>
                 <p className="text-title font-medium text-foreground">
                   {project.outcome}

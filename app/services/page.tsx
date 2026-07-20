@@ -8,6 +8,8 @@ import { Reveal } from '@/components/motion/reveal';
 import { Process } from '@/components/sections/process';
 import { Technology } from '@/components/sections/technology';
 import { FinalCta } from '@/components/sections/final-cta';
+import { EngagementFocusMap } from '@/components/sections/engagement-focus-map';
+import { ServiceProductionSystem } from '@/components/sections/service-production-system';
 
 export const metadata: Metadata = createMetadata({
   title: 'Services',
@@ -28,12 +30,14 @@ export default function ServicesPage() {
           </>
         }
         description="A senior, integrated team for the moments when product ambition, customer experience and technical complexity must move together."
+        visual={<ServiceProductionSystem />}
         aside={
           <a
             href="#practices"
             className="inline-flex min-h-11 items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-muted transition hover:text-foreground"
           >
-            Explore our practices <ArrowDownRight className="h-4 w-4" />
+            Explore our practices
+            <ArrowDownRight className="h-4 w-4" />
           </a>
         }
       />
@@ -107,18 +111,25 @@ export default function ServicesPage() {
         <Container>
           <Reveal>
             <span className="eyebrow">Focused engagements</span>
-            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-              <h2 className="text-display font-semibold text-foreground">
+
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(460px,1.22fr)] lg:items-start lg:gap-14 xl:gap-20">
+              <h2 className="max-w-[9ch] text-display font-semibold text-foreground">
                 Bring us the product moment that needs senior attention.
               </h2>
-              <p className="max-w-xl text-base leading-8 text-muted md:text-lg">
-                Engage Asheratech for an end-to-end product build or a focused
-                intervention around discovery, design, architecture or
-                modernization.
-              </p>
+
+              <div className="lg:pt-1">
+                <div className="hidden lg:block">
+                  <EngagementFocusMap />
+                </div>
+
+                <p className="max-w-2xl text-base leading-8 text-muted md:text-lg lg:mt-7">
+                  Engage Asheratech for an end-to-end product build or a focused
+                  intervention around discovery, design, architecture or modernization.
+                </p>
+              </div>
             </div>
           </Reveal>
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {serviceDetails.map((service, index) => {
               const Icon = service.icon;
               return (

@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         title="A straightforward approach to website information."
         description="This page explains the basic information collected through the Asheratech portfolio and project inquiry form."
       />
-      <section data-chapter="Policy" className="py-20 md:py-28">
+      <section data-chapter="Policy" className="py-14 md:py-18">
         <Container>
           <div className="prose-ashera max-w-3xl">
             <h2>Information you provide</h2>

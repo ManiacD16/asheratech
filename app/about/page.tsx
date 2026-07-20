@@ -7,6 +7,9 @@ import { PageIntro } from '@/components/ui/page-intro';
 import { Reveal } from '@/components/motion/reveal';
 import { Button } from '@/components/ui/button';
 import { FinalCta } from '@/components/sections/final-cta';
+import { ProductDirectionSystem } from '@/components/sections/product-direction-system';
+import { WorkingRelationshipSystem } from '@/components/sections/working-relationship-system';
+import { TrustEnvironmentMap } from '@/components/sections/trust-environment-map';
 
 export const metadata: Metadata = createMetadata({
   title: 'About',
@@ -30,7 +33,7 @@ const values = [
   },
   {
     title: 'Ownership earns trust',
-    body: 'We surface risks early, explain trade-offs directly and stay accountable to the outcome—not only the output.',
+    body: 'We surface risks early, explain trade-offs directly and stay accountable to the outcome-not only the output.',
   },
 ];
 
@@ -55,38 +58,49 @@ export default function AboutPage() {
 
       <section data-chapter="Point of view" className="section-shell">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.78fr)_minmax(480px,1.22fr)] lg:items-start lg:gap-16 xl:gap-20">
             <Reveal>
-              <span className="eyebrow">Our point of view</span>
-              <h2 className="text-display font-semibold text-foreground">
-                The best technology partner makes the problem smaller.
-              </h2>
+              <div>
+                <span className="eyebrow">Our point of view</span>
+
+                <h2 className="max-w-[8.5ch] text-display font-semibold text-foreground">
+                  The best technology partner makes the problem smaller.
+                </h2>
+              </div>
             </Reveal>
+
             <Reveal delay={0.08}>
-              <div className="space-y-6 text-lg leading-9 text-muted">
-                <p>
-                  Complex products rarely fail because a team cannot write code.
-                  They fail because the opportunity stays vague, decisions
-                  become disconnected and technical weight grows faster than
-                  shared understanding.
-                </p>
-                <p>
-                  Asheratech brings strategy, experience and engineering into
-                  one conversation. That creates tighter feedback loops, fewer
-                  handoff gaps and a clearer relationship between what users
-                  need, what the business values and what the system must do.
-                </p>
-                <p>
-                  We are especially useful in fintech, digital assets, mobile
-                  and enterprise environments where trust, access, transaction
-                  state and operational clarity cannot be left to chance.
-                </p>
+              <div>
+                <div className="space-y-6 text-lg leading-9 text-muted">
+                  <p>
+                    Complex products rarely fail because a team cannot write code.
+                    They fail because the opportunity stays vague, decisions become
+                    disconnected and technical weight grows faster than shared
+                    understanding.
+                  </p>
+
+                  <p>
+                    Asheratech brings strategy, experience and engineering into one
+                    conversation. That creates tighter feedback loops, fewer handoff
+                    gaps and a clearer relationship between what users need, what the
+                    business values and what the system must do.
+                  </p>
+
+                  <p>
+                    We are especially useful in fintech, digital assets, mobile and
+                    enterprise environments where trust, access, transaction state
+                    and operational clarity cannot be left to chance.
+                  </p>
+                </div>
+
+                <div className="mt-10 hidden lg:block">
+                  <TrustEnvironmentMap />
+                </div>
               </div>
             </Reveal>
           </div>
         </Container>
       </section>
-
       <section
         data-chapter="Disciplines"
         className="section-shell bg-navy-950 text-white"
@@ -94,23 +108,31 @@ export default function AboutPage() {
         <div className="noise" />
         <Container className="relative">
           <Reveal>
-            <div className="grid gap-12 lg:grid-cols-[0.74fr_1.26fr] lg:items-end">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(470px,1.28fr)] lg:items-start lg:gap-14 xl:gap-20">
               <div>
                 <span className="eyebrow text-white/[0.48]">
                   What we bring together
                 </span>
-                <h2 className="text-display font-semibold text-white">
+
+                <h2 className="max-w-[8ch] text-display font-semibold text-white">
                   Four disciplines. One shared product direction.
                 </h2>
               </div>
-              <p className="max-w-xl text-base leading-8 text-white/[0.6] md:text-lg">
-                Strong products emerge when commercial, customer and technical
-                decisions reinforce one another. Our model is designed around
-                that connection.
-              </p>
+
+              <div className="lg:pt-1">
+                <div className="hidden lg:block">
+                  <ProductDirectionSystem />
+                </div>
+
+                <p className="max-w-2xl text-base leading-8 text-white/[0.6] md:text-lg lg:mt-7">
+                  Strong products emerge when commercial, customer and technical
+                  decisions reinforce one another. Our model is designed around
+                  that connection.
+                </p>
+              </div>
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-px overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/10 md:grid-cols-2 lg:mt-24 lg:grid-cols-4">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/10 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
             {disciplines.map((discipline, index) => (
               <Reveal key={discipline} delay={index * 0.06}>
                 <div className="kinetic-rule group min-h-[250px] bg-navy-950 p-7 transition duration-700 hover:bg-white/[0.055] md:p-8">
@@ -129,13 +151,22 @@ export default function AboutPage() {
 
       <section data-chapter="Values" className="section-shell">
         <Container>
-          <Reveal>
-            <span className="eyebrow">How we show up</span>
-            <h2 className="max-w-4xl text-display font-semibold text-foreground">
-              A working relationship designed around trust and traction.
-            </h2>
-          </Reveal>
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-20">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(450px,1.22fr)] lg:gap-14 xl:gap-20">
+            <Reveal>
+              <div>
+                <span className="eyebrow">How we show up</span>
+
+                <h2 className="max-w-[9ch] text-display font-semibold text-foreground">
+                  A working relationship designed around trust and traction.
+                </h2>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1} className="hidden lg:block">
+              <WorkingRelationshipSystem />
+            </Reveal>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.06} className="h-full">
                 <article className="surface-depth kinetic-rule h-full rounded-[1.55rem] border border-border bg-card p-7 md:p-9">

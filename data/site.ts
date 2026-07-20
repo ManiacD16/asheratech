@@ -39,7 +39,7 @@ export const principles = [
   {
     number: '03',
     title: 'Scale and security by design',
-    copy: 'Architecture, observability and risk are considered from day one—not patched in at the finish line.',
+    copy: 'Architecture, observability and risk are considered from day one-not patched in at the finish line.',
   },
   {
     number: '04',

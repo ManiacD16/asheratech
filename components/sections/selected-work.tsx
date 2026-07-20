@@ -20,7 +20,7 @@ export function SelectedWork() {
         WORK
       </span>
       <Container className="relative">
-        <div className="flex flex-col gap-9 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <Reveal>
             <SectionHeading
               eyebrow="Selected work"
@@ -39,7 +39,7 @@ export function SelectedWork() {
             </Button>
           </Reveal>
         </div>
-        <div className="mt-20 grid gap-24 lg:mt-28 lg:gap-36">
+        <div className="mt-14 grid gap-16 lg:mt-18 lg:gap-24">
           {featured.map((project, index) => (
             <ProjectCard
               key={project.slug}

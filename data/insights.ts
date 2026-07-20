@@ -65,14 +65,14 @@ export const insights: Insight[] = [
       {
         heading: 'Measure operational improvement',
         body: [
-          'Track lead time, exception volume, manual reconciliation and recovery—not just technical migration milestones. Modernization succeeds when the organization operates with less friction and better visibility.',
+          'Track lead time, exception volume, manual reconciliation and recovery-not just technical migration milestones. Modernization succeeds when the organization operates with less friction and better visibility.',
         ],
       },
     ],
   },
   {
     slug: 'hide-blockchain-complexity-not-consequence',
-    title: 'Hide blockchain complexity—not transaction consequence',
+    title: 'Hide blockchain complexity-not transaction consequence',
     excerpt:
       'Good Web3 UX removes implementation detail while preserving the information people need to understand ownership, cost and finality.',
     category: 'Digital assets',
@@ -95,7 +95,7 @@ export const insights: Insight[] = [
       {
         heading: 'Design for recovery even when reversal is impossible',
         body: [
-          'Recovery can mean better diagnosis, support evidence and next-step guidance—not necessarily undoing the transaction. Product teams should treat these paths as core experience, not edge-case copy.',
+          'Recovery can mean better diagnosis, support evidence and next-step guidance-not necessarily undoing the transaction. Product teams should treat these paths as core experience, not edge-case copy.',
         ],
       },
     ],

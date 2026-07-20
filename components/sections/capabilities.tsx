@@ -8,6 +8,8 @@ import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/motion/reveal';
 import { cn } from '@/lib/utils';
+import { CapabilitySignal } from '@/components/sections/capability-signal';
+import { CapabilityCardGraphic } from '@/components/sections/capability-card-graphic';
 
 export function Capabilities() {
   return (
@@ -16,19 +18,26 @@ export function Capabilities() {
       className="section-shell relative overflow-hidden bg-surface/55"
     >
       <Container className="relative">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Integrated capabilities"
-            title={
-              <>
-                One team from{' '}
-                <span className="text-gradient">signal to scale.</span>
-              </>
-            }
-            description="We bring product strategy, experience and engineering into the same decision loop—so ambitious products move with less translation and more intent."
-          />
-        </Reveal>
-        <div className="mt-16 grid gap-4 md:grid-cols-2 lg:mt-24 lg:grid-cols-12">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.38fr)_minmax(330px,0.62fr)] lg:gap-12 xl:gap-16">
+  <Reveal>
+    <SectionHeading
+      eyebrow="Integrated capabilities"
+      className="max-w-[780px]"
+      title={
+        <>
+          One team from{' '}
+          <span className="text-gradient">signal to scale.</span>
+        </>
+      }
+      description="We bring product strategy, experience and engineering into the same decision loop-so ambitious products move with less translation and more intent."
+    />
+  </Reveal>
+
+  <Reveal delay={0.12} className="hidden lg:block">
+    <CapabilitySignal />
+  </Reveal>
+</div>
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-12">
           {servicePractices.map((practice, index) => {
             const Icon = practice.icon;
             const spans = [
@@ -61,8 +70,9 @@ export function Capabilities() {
                   style={
                     { '--spot-x': '50%', '--spot-y': '50%' } as CSSProperties
                   }
-                  className="spotlight-card surface-depth kinetic-rule group relative flex h-full min-h-[400px] flex-col overflow-hidden rounded-[1.9rem] border border-border bg-card p-7 transition duration-700 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] md:min-h-[440px] md:p-10"
+                  className="spotlight-card surface-depth kinetic-rule group relative flex h-full min-h-[350px] flex-col overflow-hidden rounded-[1.9rem] border border-border bg-card p-7 transition duration-700 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] md:min-h-[390px] md:p-9"
                 >
+                   <CapabilityCardGraphic variant={index} />
                   <div className="relative z-10 flex items-start justify-between">
                     <span className="icon-orbit inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-border bg-surface text-foreground transition duration-500 group-hover:rotate-6 group-hover:border-accent group-hover:bg-accent group-hover:text-accent-foreground">
                       <Icon className="h-5 w-5" />
@@ -74,7 +84,7 @@ export function Capabilities() {
                       0{index + 1}
                     </span>
                   </div>
-                  <div className="relative z-10 mt-auto pt-20">
+                  <div className="relative z-10 mt-auto pt-14">
                     <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-muted">
                       {practice.eyebrow}
                     </p>

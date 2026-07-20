@@ -1,4 +1,4 @@
-# Asheratech — Definitive Refinement Pass
+# Asheratech - Definitive Refinement Pass
 
 This pass moves the portfolio from a polished agency template to a more authored studio experience. The visual and interaction system is now designed around clarity, controlled tension, editorial scale, and signal-green moments rather than repeated card patterns or uniform fade-up animation.
 

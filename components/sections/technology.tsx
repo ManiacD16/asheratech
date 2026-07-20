@@ -6,6 +6,7 @@ import { technologies } from '@/data/site';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/motion/reveal';
+import { StackDecisionPanel } from '@/components/sections/stack-decision-panel';
 
 export function Technology() {
   const root = useRef<HTMLElement>(null);
@@ -18,24 +19,30 @@ export function Technology() {
       className="section-shell overflow-hidden bg-surface/55"
     >
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(370px,0.75fr)] lg:gap-12 xl:gap-16">
           <Reveal>
             <SectionHeading
               eyebrow="Technology with a purpose"
-              title="The stack follows the product—not the other way around."
+              className="max-w-[790px]"
+              title="The stack follows the product-not the other way around."
               description="We choose tools around reliability, team context and the product’s next stage. These are the systems we work with most often."
             />
           </Reveal>
-          <Reveal delay={0.08}>
-            <p className="max-w-xs border-l border-accent pl-5 text-xs font-semibold uppercase leading-6 tracking-[0.14em] text-muted">
-              Built for maintainability
-              <br />
-              Measured in outcomes
-            </p>
+
+          <Reveal delay={0.1} className="hidden lg:block">
+            <StackDecisionPanel />
           </Reveal>
         </div>
+
+        <Reveal delay={0.08} className="mt-8 lg:hidden">
+          <p className="max-w-xs border-l border-accent pl-5 text-xs font-semibold uppercase leading-6 tracking-[0.14em] text-muted">
+            Built for maintainability
+            <br />
+            Measured in outcomes
+          </p>
+        </Reveal>
       </Container>
-      <div className="mt-16 space-y-3 lg:mt-24">
+      <div className="mt-12 space-y-3 lg:mt-16">
         {rows.map(([category, items], rowIndex) => {
           const values = [...items, ...items, ...items];
           return (

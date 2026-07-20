@@ -159,7 +159,7 @@ export function Hero() {
       ref={root}
       onPointerMove={handlePointerMove}
       onPointerLeave={resetStage}
-      className="relative min-h-[100svh] overflow-hidden pb-12 pt-28 md:pb-16 md:pt-36 lg:flex lg:min-h-[960px] lg:items-center lg:pb-24 lg:pt-32"
+      className="relative min-h-[88svh] overflow-hidden pb-10 pt-24 md:pb-12 md:pt-28 lg:flex lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-28"
     >
       <div className="grid-lines absolute inset-0 opacity-35" />
       <div className="noise" />
@@ -175,7 +175,7 @@ export function Hero() {
       </span>
 
       <Container className="relative w-full">
-        <div className="mb-10 flex items-center justify-between border-b border-border/80 pb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted md:mb-14">
+        <div className="mb-8 flex items-center justify-between border-b border-border/80 pb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted md:mb-10">
           <span data-hero-meta>Independent digital studio</span>
           <span data-hero-meta className="hidden sm:block">
             India · Working globally
@@ -186,7 +186,7 @@ export function Hero() {
           </span>
         </div>
 
-        <div className="grid items-center gap-14 lg:grid-cols-[0.91fr_1.09fr] lg:gap-8 xl:gap-12">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.91fr_1.09fr] lg:gap-8 xl:gap-10">
           <div className="relative z-10 max-w-4xl">
             <span data-hero-meta className="eyebrow">
               Digital product & engineering agency
@@ -210,13 +210,13 @@ export function Hero() {
             </h1>
             <p
               data-hero-copy
-              className="mt-7 max-w-xl text-base leading-8 text-muted md:text-xl md:leading-9"
+              className="mt-6 max-w-xl text-base leading-8 text-muted md:text-xl md:leading-9"
             >
               Strategy, experience and engineering for fintech, Web3, mobile and
-              enterprise platforms—built for trust, scale and measurable
+              enterprise platforms-built for trust, scale and measurable
               progress.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <div data-hero-action>
                 <Button href="/work">View our work</Button>
               </div>
@@ -230,7 +230,7 @@ export function Hero() {
               data-hero-copy
               href="#selected-work"
               data-cursor="Scroll"
-              className="group mt-12 inline-flex min-h-11 items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted transition hover:text-foreground"
+              className="group mt-8 inline-flex min-h-11 items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted transition hover:text-foreground"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-border bg-card transition group-hover:border-accent group-hover:bg-accent group-hover:text-accent-foreground">
                 <ArrowDown className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1" />
@@ -239,7 +239,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div ref={stage} className="will-change-transform">
+          <div ref={stage} className="will-change-transform lg:-mt-10 xl:-mt-72">
             <HeroStage />
           </div>
         </div>

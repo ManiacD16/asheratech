@@ -24,8 +24,8 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-white">
       <div className="noise" />
-      <Container className="relative py-16 md:py-20">
-        <div className="grid gap-14 border-b border-white/15 pb-14 lg:grid-cols-[1.35fr_1fr]">
+      <Container className="relative py-12 md:py-16">
+        <div className="grid gap-10 border-b border-white/15 pb-10 lg:grid-cols-[1.35fr_1fr]">
           <div>
             <Logo inverse />
             <p className="mt-6 max-w-md text-base leading-7 text-white/[0.62]">
@@ -63,7 +63,7 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div className="overflow-hidden border-b border-white/15 py-8 md:py-10">
+        <div className="overflow-hidden border-b border-white/15 py-6 md:py-8">
           <div
             aria-hidden="true"
             className="select-none whitespace-nowrap text-center text-[clamp(3.2rem,13vw,12rem)] font-semibold leading-[0.78] tracking-[-0.085em]"
