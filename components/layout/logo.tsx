@@ -61,14 +61,14 @@ export function Logo({
 
         <span
           className={cn(
-            'mt-1 whitespace-nowrap text-[0.2rem] leading-none tracking-[0.05em] transition-colors duration-300 sm:text-[0.56rem]',
+            'mt-1 whitespace-nowrap text-[0.7rem] leading-none tracking-[0.05em] transition-colors duration-300 sm:text-[0.7rem]',
             inverse
               ? 'text-white/50 group-hover:text-white/70'
               : 'text-muted group-hover:text-foreground/70',
           )}
         >
           {/*  */}
-          Your Legacy compile into innovation
+          Legacy into innovation
         </span>
       </span>
     </Link>

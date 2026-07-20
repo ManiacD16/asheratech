@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/hero';
 import { ProofStrip } from '@/components/sections/proof-strip';
 import { SelectedWork } from '@/components/sections/selected-work';
+import { BlockchainExpertise } from '@/components/sections/blockchain-expertise';
 import { Capabilities } from '@/components/sections/capabilities';
 import { Principles } from '@/components/sections/principles';
 import { Process } from '@/components/sections/process';
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Hero />
       <ProofStrip />
       <SelectedWork />
+      <BlockchainExpertise />
       <Capabilities />
       <Principles />
       <Process />

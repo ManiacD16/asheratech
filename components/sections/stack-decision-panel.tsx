@@ -2,64 +2,68 @@
 
 import {
   Check,
-  Route,
+  Code2,
+  Fingerprint,
+  Network,
   ShieldCheck,
-  SlidersHorizontal,
-  UsersRound,
+  WalletCards,
 } from 'lucide-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import {
+  motion,
+  useReducedMotion,
+} from 'framer-motion';
+import { BlockchainNetworkBackground } from '@/components/sections/blockchain-network-background';
 
-const decisionSignals = [
+const blockchainSignals = [
   {
-    label: 'Reliability',
-    value: 96,
+    label: 'Contract security',
+    value: 97,
     icon: ShieldCheck,
   },
   {
-    label: 'Team context',
-    value: 92,
-    icon: UsersRound,
+    label: 'Wallet readiness',
+    value: 94,
+    icon: WalletCards,
   },
   {
-    label: 'Scale readiness',
-    value: 89,
-    icon: Route,
+    label: 'Identity & compliance',
+    value: 92,
+    icon: Fingerprint,
   },
 ];
 
-const selectedStack = ['Next.js', 'Node.js', 'PostgreSQL', 'AWS'];
+const selectedStack = [
+  'Solidity',
+  'Viem',
+  'ERC-3643',
+  'Fireblocks',
+  'The Graph',
+];
 
 export function StackDecisionPanel() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <div
-      aria-hidden="true"
-      className="surface-depth group relative min-h-[340px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:p-7"
+      role="img"
+      aria-label="Blockchain architecture panel highlighting smart-contract, wallet and identity infrastructure."
+      className="surface-depth group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:p-7"
     >
-      {/* Background system */}
-      <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_88%)]" />
+      <BlockchainNetworkBackground className="opacity-35" />
 
-      <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-accent/[0.08] blur-[75px] transition duration-700 group-hover:bg-accent/[0.14]" />
-
-      <span className="pointer-events-none absolute -right-2 top-24 select-none text-[6rem] font-semibold leading-none tracking-[-0.09em] text-foreground/[0.025]">
-        FIT
-      </span>
-
-      {/* Header */}
       <div className="relative z-10 flex items-start justify-between border-b border-border/70 pb-4">
         <div className="flex items-start gap-3">
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface text-foreground">
-            <SlidersHorizontal className="h-4 w-4" />
+            <Network className="h-4 w-4" />
           </span>
 
           <div>
             <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-muted">
-              Architecture decision engine
+              Primary technology practice
             </p>
 
             <p className="mt-1 text-sm font-semibold tracking-[-0.025em] text-foreground">
-              Stack selected by context
+              Blockchain product architecture
             </p>
           </div>
         </div>
@@ -72,15 +76,14 @@ export function StackDecisionPanel() {
           </span>
 
           <span className="text-[8px] font-semibold uppercase tracking-[0.14em] text-muted">
-            Evaluating
+            Chain ready
           </span>
         </div>
       </div>
 
-      {/* Decision score and signals */}
       <div className="relative z-10 mt-6 grid grid-cols-[1fr_auto] gap-6">
         <div className="space-y-5">
-          {decisionSignals.map((signal, index) => {
+          {blockchainSignals.map((signal, index) => {
             const Icon = signal.icon;
 
             return (
@@ -128,42 +131,48 @@ export function StackDecisionPanel() {
           })}
         </div>
 
-        {/* Composite score */}
         <div className="flex flex-col items-center justify-center">
-          <div
-            className="relative flex h-[88px] w-[88px] items-center justify-center rounded-full p-[1px]"
-            style={{
-              background:
-                'conic-gradient(rgb(0 224 92) 0deg 331deg, rgba(101,118,148,.16) 331deg 360deg)',
-            }}
-          >
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-card">
-              <span className="text-2xl font-semibold tracking-[-0.06em] text-foreground">
-                92
-              </span>
+          <div className="relative flex h-[92px] w-[92px] items-center justify-center rounded-full border border-accent/35 bg-card shadow-[0_0_0_8px_rgba(0,224,92,.05),0_20px_50px_-25px_rgba(0,224,92,.45)]">
+            {!shouldReduceMotion && (
+              <motion.span
+                className="absolute inset-0 rounded-full border border-accent/30"
+                animate={{
+                  scale: [1, 1.26],
+                  opacity: [0.5, 0],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: 'easeOut',
+                }}
+              />
+            )}
 
-              <span className="mt-0.5 text-[7px] font-semibold uppercase tracking-[0.16em] text-muted">
-                Fit score
+            <div className="flex flex-col items-center justify-center">
+              <Code2 className="h-5 w-5 text-accentText" />
+
+              <span className="mt-2 text-[8px] font-semibold uppercase tracking-[0.14em] text-muted">
+                Core stack
               </span>
             </div>
           </div>
 
           <span className="mt-3 inline-flex items-center gap-1.5 text-[8px] font-semibold uppercase tracking-[0.13em] text-muted">
             <Check className="h-3 w-3 text-accentText" />
-            Recommended
+
+            Production focused
           </span>
         </div>
       </div>
 
-      {/* Selected architecture */}
-      <div className="relative z-10 mt-7 rounded-2xl border border-border/70 bg-surface/70 p-4">
+      <div className="relative z-10 mt-7 rounded-2xl border border-accent/25 bg-accent/[0.045] p-4">
         <div className="flex items-center justify-between">
           <span className="text-[8px] font-semibold uppercase tracking-[0.15em] text-muted">
-            Selected architecture
+            Blockchain stack
           </span>
 
           <span className="text-[8px] font-semibold uppercase tracking-[0.14em] text-accentText">
-            High confidence
+            Primary expertise
           </span>
         </div>
 
@@ -193,20 +202,20 @@ export function StackDecisionPanel() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-2 text-[9px] font-semibold text-foreground transition duration-300 hover:border-accent"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+
               {technology}
             </motion.span>
           ))}
         </div>
       </div>
 
-      {/* Footer */}
       <div className="relative z-10 mt-5 flex items-center justify-between border-t border-border/70 pt-4">
         <span className="text-[8px] font-semibold uppercase tracking-[0.13em] text-muted">
-          Maintainability · Context · Outcomes
+          Contracts · Wallets · Identity · Indexing
         </span>
 
         <span className="text-[8px] font-semibold uppercase tracking-[0.13em] text-foreground">
-          Decision 04
+          Main stack
         </span>
       </div>
     </div>

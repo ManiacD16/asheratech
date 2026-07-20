@@ -6,12 +6,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   ArrowDown,
   Check,
-  CircleDollarSign,
+  WalletCards,
   ShieldCheck,
   Sparkles,
 } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
+import { BlockchainNetworkBackground } from '@/components/sections/blockchain-network-background';
 
 if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
@@ -162,6 +163,7 @@ export function Hero() {
       className="relative min-h-[88svh] overflow-hidden pb-10 pt-24 md:pb-12 md:pt-28 lg:flex lg:min-h-[820px] lg:items-center lg:pb-16 lg:pt-28"
     >
       <div className="grid-lines absolute inset-0 opacity-35" />
+      <BlockchainNetworkBackground className="opacity-55" />
       <div className="noise" />
       <div
         ref={glow}
@@ -188,33 +190,49 @@ export function Hero() {
 
         <div className="grid items-center gap-10 lg:grid-cols-[0.91fr_1.09fr] lg:gap-8 xl:gap-10">
           <div className="relative z-10 max-w-4xl">
-            <span data-hero-meta className="eyebrow">
-              Digital product & engineering agency
+            <span
+              data-hero-meta
+              className="eyebrow"
+            >
+              Blockchain-first product & engineering agency
             </span>
+
             <h1 className="text-[clamp(3.75rem,7.8vw,7.7rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-foreground">
               <span className="block overflow-hidden pb-[0.08em]">
-                <span data-hero-line className="block">
-                  Complex ideas.
+                <span
+                  data-hero-line
+                  className="block"
+                >
+                  Blockchain systems.
                 </span>
               </span>
+
               <span className="block overflow-hidden pb-[0.08em]">
-                <span data-hero-line className="headline-outline block">
+                <span
+                  data-hero-line
+                  className="headline-outline block"
+                >
                   Clear products.
                 </span>
               </span>
+
               <span className="block overflow-hidden pb-[0.12em]">
-                <span data-hero-line className="text-gradient block">
-                  Real momentum.
+                <span
+                  data-hero-line
+                  className="text-gradient block"
+                >
+                  Real adoption.
                 </span>
               </span>
             </h1>
+
             <p
               data-hero-copy
               className="mt-6 max-w-xl text-base leading-8 text-muted md:text-xl md:leading-9"
             >
-              Strategy, experience and engineering for fintech, Web3, mobile and
-              enterprise platforms-built for trust, scale and measurable
-              progress.
+              Secure smart contracts, wallets, tokenized assets and
+              on-chain operations—supported by product strategy,
+              experience design and production engineering.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <div data-hero-action>
@@ -239,7 +257,10 @@ export function Hero() {
             </a>
           </div>
 
-          <div ref={stage} className="will-change-transform lg:-mt-10 xl:-mt-72">
+          <div
+            ref={stage}
+            className="will-change-transform lg:-mt-8 xl:-mt-10"
+          >
             <HeroStage />
           </div>
         </div>
@@ -255,6 +276,19 @@ export function Hero() {
                 'ENGINEERING',
                 'FINTECH',
                 'WEB3',
+                'BLOCKCHAIN',
+                'CRYPTOCURRENCY',
+                'WEB APPLICATION',
+                'MOBILE APP',
+                'AI',
+                'UI/UX',
+                'CLOUD & DEVOPS SERVICES',
+                'CYBERSECURITY',
+                'API',
+                'SAAS',
+                'ENTERPRISE SOFTWARE',
+                'QA',
+                'IT CONSULTING'
               ])
               .map((item, index) => (
                 <div key={`${item}-${index}`} className="flex items-center">
@@ -299,7 +333,7 @@ function HeroStage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>{' '}
-            Systems live
+            Networks live
           </div>
         </div>
         <div className="grid min-h-[380px] grid-cols-[72px_1fr] sm:grid-cols-[104px_1fr] lg:min-h-[470px]">
@@ -318,10 +352,10 @@ function HeroStage() {
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-                  Product signal
+                  On-chain product
                 </p>
                 <p className="mt-2 text-2xl font-bold tracking-[-0.05em] text-foreground sm:text-3xl">
-                  Clear. Connected. Ready.
+                  Secure. Compliant. Ready.
                 </p>
               </div>
               <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-accent/15 px-3 py-1.5 text-[10px] font-semibold text-foreground">
@@ -330,9 +364,9 @@ function HeroStage() {
             </div>
             <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
               {[
-                ['Strategy', 'Aligned'],
-                ['Experience', 'Validated'],
-                ['Engineering', 'Shipping'],
+                ['Identity', 'Verified'],
+                ['Contracts', 'Audited'],
+                ['Operations', 'Live'],
               ].map(([label, value], index) => (
                 <div
                   key={label}
@@ -351,9 +385,9 @@ function HeroStage() {
             <div className="mt-7 rounded-2xl border border-border/70 p-4">
               <div className="flex items-center justify-between">
                 <p className="text-[10px] font-semibold text-foreground">
-                  Delivery momentum
+                  On-chain activity
                 </p>
-                <p className="text-[9px] text-muted">Last 10 cycles</p>
+                <p className="text-[9px] text-muted">Last 10 blocks</p>
               </div>
               <div className="mt-5 flex h-24 items-end gap-1.5">
                 {chart.map((height, index) => (
@@ -380,7 +414,7 @@ function HeroStage() {
         </span>
         <div>
           <p className="text-[9px] uppercase tracking-[0.12em] text-muted">
-            Built-in confidence
+            Contract security
           </p>
           <p className="mt-0.5 text-xs font-semibold text-foreground">
             Secure by design
@@ -393,15 +427,17 @@ function HeroStage() {
         className="icon-orbit absolute right-0 top-0 flex items-center gap-3 rounded-2xl border border-border bg-card/90 p-3.5 shadow-[0_24px_70px_-30px_rgba(24,31,56,.55)] backdrop-blur-2xl sm:right-2 lg:right-0 lg:top-4 xl:-right-10"
       >
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#dcecff] text-[#2f6bb8] dark:bg-[#74a7ff]/15 dark:text-[#8bb6ff]">
-          <CircleDollarSign className="h-5 w-5" />
+          <WalletCards className="h-5 w-5" />
         </span>
         <div>
           <p className="text-[9px] uppercase tracking-[0.12em] text-muted">
-            Product ready
+            Wallet infrastructure
           </p>
+
           <p className="mt-0.5 flex items-center gap-1.5 text-xs font-semibold text-foreground">
-            <Check className="h-3.5 w-3.5 text-accentText" /> From brief to
-            scale
+            <Check className="h-3.5 w-3.5 text-accentText" />
+
+            Custody & signing live
           </p>
         </div>
       </div>

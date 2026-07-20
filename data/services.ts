@@ -62,18 +62,18 @@ export const servicePractices = [
   },
   {
     slug: 'fintech-web3',
-    eyebrow: '04 / Fintech & Web3',
-    title: 'Bring trust to high-stakes digital systems.',
+    eyebrow: '04 / Blockchain engineering',
+    title: 'Build trusted blockchain products for real-world adoption.',
     description:
-      'We help teams navigate payments, wallets, tokenization and digital-asset infrastructure without compromising usability or control.',
+      'Our core practice covers smart contracts, wallets, tokenization, digital identity and on-chain operations without compromising usability or control.',
     icon: CircleDollarSign,
     capabilities: [
-      'Payment integrations',
-      'Digital identity and KYC',
-      'Custodial wallet systems',
-      'Smart contract products',
-      'Tokenized assets',
-      'Transaction operations',
+      'Smart contract engineering',
+      'Custodial and non-custodial wallets',
+      'Tokenization and digital assets',
+      'Digital identity and compliance',
+      'Blockchain integrations',
+      'On-chain operations',
     ],
   },
 ] as const;
