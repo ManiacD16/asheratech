@@ -11,7 +11,7 @@ export function ProofStrip() {
       <div className="marquee-mask overflow-hidden">
         <div 
   className="flex w-max animate-marquee items-center transition-[animation-play-state] hover:[animation-play-state:paused] motion-reduce:animate-none"
-  style={{ animationDuration: '50s' }}
+  style={{ animationDuration: '90s' }}
 >
           {repeated.map((item, index) => (
             <div key={`${item}-${index}`} className="flex items-center">
