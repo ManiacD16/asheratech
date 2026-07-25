@@ -5,7 +5,7 @@ export function ProofStrip() {
   return (
     <section
       data-chapter="Disciplines"
-      aria-label="Asheratech disciplines"
+      aria-label="Asheraatech disciplines"
       className="border-y border-border bg-surface/55 py-5"
     >
       <div className="marquee-mask overflow-hidden">

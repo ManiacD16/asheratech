@@ -10,7 +10,7 @@ export default function Loading() {
         <div className="flex items-end justify-between border-b border-white/15 pb-5">
           <div>
             <p className="text-2xl font-semibold tracking-[-0.05em]">
-              Asheratech<span className="text-signal">.</span>
+              Asheraatech<span className="text-signal">.</span>
             </p>
             <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/55">
               Loading the next signal

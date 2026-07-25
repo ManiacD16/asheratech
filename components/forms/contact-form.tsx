@@ -224,7 +224,7 @@ export function ContactForm() {
       </label>
       <div className="mt-8 flex flex-col gap-6 border-t border-border pt-7 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-sm text-xs leading-5 text-muted">
-          By submitting, you agree that Asheratech may use these details to
+          By submitting, you agree that Asheraatech may use these details to
           respond to your inquiry.
         </p>
         <button

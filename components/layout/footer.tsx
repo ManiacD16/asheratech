@@ -68,7 +68,7 @@ export function Footer() {
             aria-hidden="true"
             className="select-none whitespace-nowrap text-center text-[clamp(3.2rem,13vw,12rem)] font-semibold leading-[0.78] tracking-[-0.085em]"
           >
-            <span className="text-white">ASHERA</span>
+            <span className="text-white">ASHERAA</span>
             <span className="headline-outline ![-webkit-text-stroke-color:rgba(255,255,255,.78)]">
               TECH
             </span>
@@ -81,7 +81,7 @@ export function Footer() {
             reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            {siteConfig.socials.map((social) => (
+            {/* {siteConfig.socials.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
@@ -91,7 +91,7 @@ export function Footer() {
               >
                 {social.label}
               </a>
-            ))}
+            ))} */}
             <Link
               href="/privacy"
               className="inline-flex min-h-11 min-w-11 items-center transition hover:text-white"

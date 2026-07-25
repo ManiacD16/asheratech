@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: 'Asheratech',
-  legalName: 'Asheratech',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://asheratech.com',
-  email: 'contact@asheratech.com',
+  name: 'Asheraatech',
+  legalName: 'Asheraatech',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://asheraatech.com',
+  email: 'contact@asheraatech.com',
   description:
     'A blockchain-first product and engineering agency building secure smart-contract, wallet, tokenization and digital-asset platforms, supported by modern web, mobile and cloud systems.',
   tagline: 'Your legacy compiled into blockchain innovation.',
@@ -13,8 +13,8 @@ export const siteConfig = {
     { label: 'Insights', href: '/insights' },
   ],
   socials: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/asheratech/' },
-    { label: 'GitHub', href: 'https://github.com/asheratech' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/asheraatech/' },
+    { label: 'GitHub', href: 'https://github.com/asheraatech' },
   ],
 } as const;
 

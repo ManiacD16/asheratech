@@ -1,4 +1,4 @@
-# Asheratech Portfolio
+# Asheraatech Portfolio
 
 An award-pass, multi-page agency portfolio built with Next.js App Router, TypeScript, Tailwind CSS, GSAP, Framer Motion and Lenis.
 
@@ -57,8 +57,8 @@ Example payload:
   "budget": "$75k–$150k",
   "message": "Project context...",
   "submittedAt": "ISO timestamp",
-  "source": "asheratech-portfolio",
-  "recipient": "contact@asheratech.com"
+  "source": "asheraatech-portfolio",
+  "recipient": "contact@asheraatech.com"
 }
 ```
 
@@ -75,7 +75,7 @@ The included work is labeled as representative/confidential. Replace it with app
 
 ## Design system
 
-The global theme translates the supplied Wrike-derived references into an Asheratech agency system:
+The global theme translates the supplied Wrike-derived references into an Asheraatech agency system:
 
 - Midnight navy for authority and dark stages
 - Signal green as the only primary chromatic action accent

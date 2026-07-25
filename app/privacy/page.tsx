@@ -6,7 +6,7 @@ import { PageIntro } from '@/components/ui/page-intro';
 export const metadata: Metadata = createMetadata({
   title: 'Privacy Policy',
   description:
-    'How Asheratech handles information submitted through this website.',
+    'How Asheraatech handles information submitted through this website.',
   path: '/privacy',
 });
 
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <PageIntro
         eyebrow="Privacy"
         title="A straightforward approach to website information."
-        description="This page explains the basic information collected through the Asheratech portfolio and project inquiry form."
+        description="This page explains the basic information collected through the Asheraatech portfolio and project inquiry form."
       />
       <section data-chapter="Policy" className="py-14 md:py-18">
         <Container>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             </p>
             <h2>Your choices</h2>
             <p>
-              You may contact contact@asheratech.com to ask about information
+              You may contact contact@asheraatech.com to ask about information
               you submitted, request a correction or request deletion where
               applicable. This starter policy should be reviewed by qualified
               legal counsel before production launch and adapted to the

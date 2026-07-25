@@ -123,7 +123,7 @@ export default function ServicesPage() {
                 </div>
 
                 <p className="max-w-2xl text-base leading-8 text-muted md:text-lg lg:mt-7">
-                  Engage Asheratech for an end-to-end product build or a focused
+                  Engage Asheraatech for an end-to-end product build or a focused
                   intervention around discovery, design, architecture or modernization.
                 </p>
               </div>

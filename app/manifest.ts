@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Asheratech - Digital Product & Engineering Agency',
-    short_name: 'Asheratech',
+    name: 'Asheraatech - Digital Product & Engineering Agency',
+    short_name: 'Asheraatech',
     description: 'Compile complexity into progress.',
     start_url: '/',
     display: 'standalone',

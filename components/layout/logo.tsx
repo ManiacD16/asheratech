@@ -15,7 +15,7 @@ export function Logo({
         'group inline-flex min-h-11 items-center gap-3 py-1',
         className,
       )}
-      aria-label="Asheratech home"
+      aria-label="Asheraatech home"
     >
       <svg
         width="34"
@@ -32,7 +32,7 @@ export function Logo({
           className={inverse ? 'fill-white' : 'fill-navy-900 dark:fill-white'}
         />
 
-        <g transform="translate(17 17) scale(1.6) translate(-17 -17)">
+        <g transform="translate(17 17) scale(1.4) translate(-17 -17)">
   <path
     d="M9.2 23.8 16.8 7l2.7 6.05-3.32 7.3H12.7L11.1 23.8H9.2Z"
     fill="#00E05C"
@@ -55,7 +55,7 @@ export function Logo({
             inverse ? 'text-white' : 'text-foreground',
           )}
         >
-          Ashera
+          Asheraa
           <span className={inverse ? 'text-signal' : 'text-accentText'}>
             tech
           </span>

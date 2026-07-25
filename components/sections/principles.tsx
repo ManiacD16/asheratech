@@ -12,7 +12,7 @@ export function Principles() {
           <Reveal>
             <div className="lg:sticky lg:top-32">
               <SectionHeading
-                eyebrow="Why Asheratech"
+                eyebrow="Why Asheraatech"
                 title="Built to reduce the distance between thinking and shipping."
                 description="The way we work is designed for complex products where clarity, control and technical judgment matter."
               />

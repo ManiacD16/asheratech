@@ -9,8 +9,8 @@ import '@/app/globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Asheratech - Digital Product & Engineering Agency',
-    template: '%s | Asheratech',
+    default: 'Asheraatech - Digital Product & Engineering Agency',
+    template: '%s | Asheraatech',
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Asheratech - Compile complexity into progress.',
+    title: 'Asheraatech - Compile complexity into progress.',
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Asheratech - Compile complexity into progress.',
+    title: 'Asheraatech - Compile complexity into progress.',
     description: siteConfig.description,
     images: ['/opengraph-image'],
   },

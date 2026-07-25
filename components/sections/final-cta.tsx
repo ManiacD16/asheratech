@@ -59,10 +59,10 @@ export function FinalCta() {
           <div className="mt-8 flex flex-col gap-3 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
             <span>Typical response: within two business days</span>
             <a
-              href="mailto:contact@asheratech.com"
+              href="mailto:contact@asheraatech.com"
               className="link-line inline-flex min-h-11 w-fit items-center font-semibold text-white/70 hover:text-signal"
             >
-              contact@asheratech.com
+              contact@asheraatech.com
             </a>
           </div>
         </Reveal>

@@ -1,4 +1,4 @@
-# Asheratech Portfolio - Final QA Report
+# Asheraatech Portfolio - Final QA Report
 
 **QA date:** 15 July 2026  
 **Test target:** Next.js production build served with `next start`  

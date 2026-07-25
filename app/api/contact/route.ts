@@ -43,8 +43,8 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         ...result.data,
         submittedAt: new Date().toISOString(),
-        source: 'asheratech-portfolio',
-        recipient: process.env.CONTACT_TO_EMAIL || 'contact@asheratech.com',
+        source: 'asheraatech-portfolio',
+        recipient: process.env.CONTACT_TO_EMAIL || 'contact@asheraatech.com',
       }),
       cache: 'no-store',
     });

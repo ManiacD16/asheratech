@@ -14,7 +14,7 @@ import { TrustEnvironmentMap } from '@/components/sections/trust-environment-map
 export const metadata: Metadata = createMetadata({
   title: 'About',
   description:
-    'Meet the thinking behind Asheratech: a senior, product-minded digital agency built to make complex systems clear and useful.',
+    'Meet the thinking behind Asheraatech: a senior, product-minded digital agency built to make complex systems clear and useful.',
   path: '/about',
 });
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="About Asheratech"
+        eyebrow="About Asheraatech"
         title={
           <>
             Less theatre. More{' '}
@@ -80,7 +80,7 @@ export default function AboutPage() {
                   </p>
 
                   <p>
-                    Asheratech brings strategy, experience and engineering into one
+                    Asheraatech brings strategy, experience and engineering into one
                     conversation. That creates tighter feedback loops, fewer handoff
                     gaps and a clearer relationship between what users need, what the
                     business values and what the system must do.

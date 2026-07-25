@@ -42,7 +42,7 @@ export function PageIntro({
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             {eyebrow}
           </span>
-          <span>Asheratech / Studio index</span>
+          <span>Asheraatech / Studio index</span>
         </div>
         <div className="grid gap-10 lg:grid-cols-[1.34fr_0.66fr] lg:items-end lg:gap-14">
           <Reveal variant="mask">

@@ -18,7 +18,7 @@ function getRouteName(pathname: string) {
   if (routeNames[pathname]) return routeNames[pathname];
   if (pathname.startsWith('/work/')) return 'Case study';
   if (pathname.startsWith('/insights/')) return 'Field note';
-  return 'Asheratech';
+  return 'Asheraatech';
 }
 
 export function PageTransition({ children }: { children: React.ReactNode }) {
@@ -67,7 +67,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
           >
             <div className="text-center">
               <span className="text-micro text-signal">
-                Asheratech / Navigate
+                Asheraatech / Navigate
               </span>
               <p className="mt-4 text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-none tracking-[-0.07em]">
                 {routeName}

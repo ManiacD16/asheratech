@@ -11,7 +11,7 @@ import { ProjectBriefSystem } from '@/components/sections/project-brief-system';
 export const metadata: Metadata = createMetadata({
   title: 'Start a Project',
   description:
-    'Tell Asheratech about the product, platform or modernization challenge you are ready to move forward.',
+    'Tell Asheraatech about the product, platform or modernization challenge you are ready to move forward.',
   path: '/contact',
 });
 
