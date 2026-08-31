@@ -1,15 +1,10 @@
 'use client';
 
 import { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import {
-  ArrowDown,
-  Check,
-  WalletCards,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { BlockchainNetworkBackground } from '@/components/sections/blockchain-network-background';
@@ -56,50 +51,7 @@ export function Hero() {
           '[data-hero-stage]',
           { opacity: 0, x: 60, rotateY: -5, scale: 0.94, duration: 1.15 },
           '-=0.9',
-        )
-        .from(
-          '[data-float-card]',
-          { opacity: 0, y: 26, scale: 0.92, duration: 0.65, stagger: 0.1 },
-          '-=0.55',
-        )
-        .from(
-          '[data-chart-bar]',
-          {
-            scaleY: 0,
-            transformOrigin: 'bottom',
-            duration: 0.75,
-            stagger: 0.045,
-          },
-          '-=0.72',
         );
-
-      const floatA = gsap.to('[data-float-a]', {
-        y: -10,
-        rotate: -1,
-        duration: 3.8,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-      });
-      const floatB = gsap.to('[data-float-b]', {
-        y: 9,
-        rotate: 1,
-        duration: 4.2,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        delay: 0.35,
-      });
-      ScrollTrigger.create({
-        trigger: root.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        onToggle: ({ isActive }) => {
-          [floatA, floatB].forEach((animation) =>
-            isActive ? animation.play() : animation.pause(),
-          );
-        },
-      });
       gsap.to('[data-hero-stage]', {
         yPercent: 7,
         ease: 'none',
@@ -303,141 +255,28 @@ export function Hero() {
 }
 
 function HeroStage() {
-  const chart = [34, 48, 42, 66, 60, 78, 72, 92, 84, 100];
   return (
     <div
       data-hero-stage
-      className="relative mx-auto min-h-[500px] w-full max-w-[680px] lg:min-h-[650px]"
+      className="relative mx-auto flex min-h-[430px] w-full max-w-[760px] items-center justify-center sm:min-h-[520px] lg:min-h-[650px]"
     >
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/10"
+        className="absolute left-1/2 top-1/2 h-[72%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.08] blur-[90px]"
       />
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 h-[58%] w-[58%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-border/60"
+        className="absolute left-[17%] top-[19%] h-2 w-2 rounded-full bg-accent shadow-[0_0_0_8px_rgba(0,224,92,.07),0_0_32px_rgba(0,224,92,.42)]"
       />
-      <div className="surface-depth absolute inset-x-4 top-8 overflow-hidden rounded-[2.2rem] border border-border/80 bg-card/[0.88] shadow-[0_40px_100px_-55px_rgba(24,31,56,.55)] backdrop-blur-2xl sm:inset-x-8 lg:inset-x-0 lg:top-12">
-        <div className="scanline" />
-        <div className="flex h-14 items-center justify-between border-b border-border/80 px-5">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#ff8d8d]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#ffd36b]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-accent" />
-          </div>
-          <div className="flex items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-muted">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-            </span>{' '}
-            Networks live
-          </div>
-        </div>
-        <div className="grid min-h-[380px] grid-cols-[72px_1fr] sm:grid-cols-[104px_1fr] lg:min-h-[470px]">
-          <aside className="border-r border-border/80 p-3 sm:p-4">
-            <div className="h-8 w-8 rounded-xl bg-foreground" />
-            <div className="mt-8 space-y-3">
-              {[1, 2, 3, 4, 5].map((item) => (
-                <span
-                  key={item}
-                  className={`block h-2 rounded-full ${item === 1 ? 'w-full bg-accent' : 'w-4/5 bg-border'}`}
-                />
-              ))}
-            </div>
-          </aside>
-          <div className="p-4 sm:p-6 lg:p-8">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-                  On-chain product
-                </p>
-                <p className="mt-2 text-2xl font-bold tracking-[-0.05em] text-foreground sm:text-3xl">
-                  Secure. Compliant. Ready.
-                </p>
-              </div>
-              <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-accent/15 px-3 py-1.5 text-[10px] font-semibold text-foreground">
-                <Sparkles className="h-3 w-3 text-accentText" /> Live insight
-              </span>
-            </div>
-            <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
-              {[
-                ['Identity', 'Verified'],
-                ['Contracts', 'Audited'],
-                ['Operations', 'Live'],
-              ].map(([label, value], index) => (
-                <div
-                  key={label}
-                  className="group rounded-2xl bg-surface p-3 transition duration-300 hover:-translate-y-1 hover:bg-card hover:shadow-float sm:p-4"
-                >
-                  <span
-                    className={`block h-1.5 w-7 rounded-full ${index === 2 ? 'bg-accent' : 'bg-foreground/20'}`}
-                  />
-                  <p className="mt-5 text-[9px] text-muted">{label}</p>
-                  <p className="mt-1 text-[10px] font-bold text-foreground sm:text-xs">
-                    {value}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-7 rounded-2xl border border-border/70 p-4">
-              <div className="flex items-center justify-between">
-                <p className="text-[10px] font-semibold text-foreground">
-                  On-chain activity
-                </p>
-                <p className="text-[9px] text-muted">Last 10 blocks</p>
-              </div>
-              <div className="mt-5 flex h-24 items-end gap-1.5">
-                {chart.map((height, index) => (
-                  <span
-                    data-chart-bar
-                    key={index}
-                    className={`flex-1 rounded-t-sm transition-colors duration-300 hover:bg-foreground ${index > 6 ? 'bg-accent' : 'bg-border'}`}
-                    style={{ height: `${height}%` }}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        data-float-card
-        data-float-a
-        className="icon-orbit absolute bottom-4 left-0 flex items-center gap-3 rounded-2xl border border-border bg-card/90 p-3.5 shadow-[0_24px_70px_-30px_rgba(24,31,56,.55)] backdrop-blur-2xl sm:bottom-9 sm:left-1 lg:-left-12 lg:bottom-20"
-      >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/[0.18] text-foreground">
-          <ShieldCheck className="h-5 w-5" />
-        </span>
-        <div>
-          <p className="text-[9px] uppercase tracking-[0.12em] text-muted">
-            Contract security
-          </p>
-          <p className="mt-0.5 text-xs font-semibold text-foreground">
-            Secure by design
-          </p>
-        </div>
-      </div>
-      <div
-        data-float-card
-        data-float-b
-        className="icon-orbit absolute right-0 top-0 flex items-center gap-3 rounded-2xl border border-border bg-card/90 p-3.5 shadow-[0_24px_70px_-30px_rgba(24,31,56,.55)] backdrop-blur-2xl sm:right-2 lg:right-0 lg:top-4 xl:-right-10"
-      >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#dcecff] text-[#2f6bb8] dark:bg-[#74a7ff]/15 dark:text-[#8bb6ff]">
-          <WalletCards className="h-5 w-5" />
-        </span>
-        <div>
-          <p className="text-[9px] uppercase tracking-[0.12em] text-muted">
-            Wallet infrastructure
-          </p>
-
-          <p className="mt-0.5 flex items-center gap-1.5 text-xs font-semibold text-foreground">
-            <Check className="h-3.5 w-3.5 text-accentText" />
-
-            Custody & signing live
-          </p>
-        </div>
-      </div>
+      <Image
+        src="/images/asheratech/asheratech-signature-hero.png"
+        alt="AsheraTech technology ecosystem connecting blockchain infrastructure, identity, custody, real-world assets and digital products."
+        width={1536}
+        height={1024}
+        priority
+        sizes="(max-width: 1024px) 100vw, 56vw"
+        className="relative z-10 h-auto w-full object-contain drop-shadow-[0_36px_70px_rgba(15,23,42,.22)] dark:drop-shadow-[0_38px_76px_rgba(0,0,0,.42)]"
+      />
     </div>
   );
 }

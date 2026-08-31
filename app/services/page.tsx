@@ -10,6 +10,7 @@ import { Technology } from '@/components/sections/technology';
 import { FinalCta } from '@/components/sections/final-cta';
 import { EngagementFocusMap } from '@/components/sections/engagement-focus-map';
 import { ServiceProductionSystem } from '@/components/sections/service-production-system';
+import { EngineeringCapabilities } from '@/components/sections/engineering-capabilities';
 
 export const metadata: Metadata = createMetadata({
   title: 'Services',
@@ -103,6 +104,8 @@ export default function ServicesPage() {
           </div>
         </Container>
       </section>
+
+      <EngineeringCapabilities />
 
       <section
         data-chapter="Engagements"

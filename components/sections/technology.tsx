@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import {
   Blocks,
   ShieldCheck,
@@ -92,6 +93,22 @@ export function Technology() {
                 </span>
               </div>
             ))}
+          </div>
+        </Reveal>
+      </Container>
+
+      <Container className="relative mt-10 lg:mt-14">
+        <Reveal delay={0.08} variant="scale">
+          <div className="surface-depth relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 sm:p-5 lg:p-7">
+            <div className="grid-lines absolute inset-0 opacity-[0.08]" />
+            <Image
+              src="/images/asheratech/technology-ecosystem.png"
+              alt="AsheraTech technology ecosystem covering frontend, mobile, backend, blockchain, databases, DevOps, integrations, cloud and supporting services."
+              width={1672}
+              height={941}
+              sizes="(max-width: 1280px) 100vw, 1200px"
+              className="relative z-10 h-auto w-full object-contain"
+            />
           </div>
         </Reveal>
       </Container>

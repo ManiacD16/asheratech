@@ -1,6 +1,7 @@
 'use client';
 
 import { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Check } from 'lucide-react';
@@ -92,6 +93,20 @@ export function Process() {
               Four connected phases keep product, experience and engineering decisions
               moving together from the first brief through real-world scale.
             </p>
+          </div>
+        </div>
+
+        <div className="mt-12 lg:mt-16">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/[0.1] bg-white/[0.035] p-3 shadow-[0_38px_110px_-62px_rgba(0,0,0,.9)] sm:p-5 lg:p-7">
+            <div className="grid-lines absolute inset-0 opacity-[0.05]" />
+            <Image
+              src="/images/asheratech/delivery-process.png"
+              alt="AsheraTech delivery process from discovery and design through development, testing, deployment and optimization."
+              width={1536}
+              height={1024}
+              sizes="(max-width: 1280px) 100vw, 1200px"
+              className="relative z-10 h-auto w-full object-contain"
+            />
           </div>
         </div>
 

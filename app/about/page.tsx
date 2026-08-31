@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { disciplines, principles } from '@/data/site';
 import { createMetadata } from '@/lib/metadata';
@@ -17,6 +18,8 @@ export const metadata: Metadata = createMetadata({
     'Meet the thinking behind Asheraatech: a senior, product-minded digital agency built to make complex systems clear and useful.',
   path: '/about',
 });
+
+const uniqueDisciplines = Array.from(new Set(disciplines));
 
 const values = [
   {
@@ -49,6 +52,18 @@ export default function AboutPage() {
           </>
         }
         description="We are a digital product and engineering agency for teams solving difficult problems. Our job is to organize complexity into decisions, systems and products people can trust."
+        visual={
+          <div className="relative overflow-hidden rounded-[1.4rem] border border-border bg-card/70 p-2">
+            <Image
+              src="/images/asheratech/asheratech-engineering-ecosystem.png"
+              alt="AsheraTech engineering ecosystem connecting product interfaces, cloud infrastructure, identity, blockchain and tokenized assets."
+              width={1672}
+              height={941}
+              sizes="360px"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+        }
         aside={
           <Button href="/contact" variant="secondary">
             Work with us
@@ -133,7 +148,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <div className="mt-12 grid gap-px overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/10 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
-            {disciplines.map((discipline, index) => (
+            {uniqueDisciplines.map((discipline, index) => (
               <Reveal key={discipline} delay={index * 0.06}>
                 <div className="kinetic-rule group min-h-[250px] bg-navy-950 p-7 transition duration-700 hover:bg-white/[0.055] md:p-8">
                   <span className="text-xs font-semibold text-signal">
