@@ -99,7 +99,7 @@ export function Technology() {
 
       <Container className="relative mt-10 lg:mt-14">
         <Reveal delay={0.08} variant="scale">
-          <div className="surface-depth relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 sm:p-5 lg:p-7">
+          <div className="surface-depth relative overflow-hidden rounded-none border border-border bg-card p-3 sm:p-5 lg:p-7">
             <div className="grid-lines absolute inset-0 opacity-[0.08]" />
             <Image
               src="/images/asheratech/technology-ecosystem.png"
@@ -107,7 +107,7 @@ export function Technology() {
               width={1672}
               height={941}
               sizes="(max-width: 1280px) 100vw, 1200px"
-              className="relative z-10 h-auto w-full object-contain"
+              className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
             />
           </div>
         </Reveal>
@@ -145,7 +145,7 @@ export function Technology() {
                     key={`${item}-${index}`}
                     className={`mx-1.5 inline-flex items-center gap-3 rounded-full border px-6 text-sm font-semibold transition duration-300 hover:-translate-y-1 ${
                       isBlockchain
-                        ? 'min-h-[4.5rem] border-accent/35 bg-navy-950 text-white shadow-[0_22px_55px_-35px_rgba(0,224,92,.45)] hover:border-accent hover:bg-accent hover:text-navy-950 dark:bg-white dark:text-navy-950 dark:hover:bg-accent'
+                        ? 'min-h-[4.5rem] border-accent/35 bg-navy-950 text-white shadow-[0_22px_55px_-35px_rgba(1,230,255,.45)] hover:border-accent hover:bg-accent hover:text-navy-950 dark:bg-white dark:text-navy-950 dark:hover:bg-accent'
                         : 'min-h-16 border-border bg-card text-foreground shadow-float hover:border-accent hover:bg-navy-900 hover:text-white dark:hover:bg-white dark:hover:text-navy-950'
                     }`}
                   >

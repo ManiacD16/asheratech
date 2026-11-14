@@ -57,7 +57,7 @@ export function ServiceProductionSystem() {
         <div
             role="img"
             aria-label="Product ambition, customer experience and technical context converging through one integrated team into a production-ready product."
-            className="surface-depth group relative min-h-[330px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-4 shadow-[0_38px_95px_-58px_rgba(24,31,56,.58)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-5"
+            className="surface-depth group relative min-h-[330px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-4 shadow-[0_38px_95px_-58px_rgba(24,31,56,.58)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-5"
         >
             <div
                 aria-hidden="true"
@@ -185,7 +185,7 @@ export function ServiceProductionSystem() {
                                 d={path}
                                 fill="none"
                                 stroke={
-                                    index === 3 ? 'rgb(0 224 92)' : 'currentColor'
+                                    index === 3 ? 'rgb(1 230 255)' : 'currentColor'
                                 }
                                 strokeWidth={index === 3 ? 1.5 : 1}
                                 strokeLinecap="round"
@@ -217,7 +217,7 @@ export function ServiceProductionSystem() {
                     {!shouldReduceMotion && (
                         <motion.span
                             aria-hidden="true"
-                            className="absolute z-20 h-2.5 w-2.5 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(0,224,92,.11),0_0_22px_rgba(0,224,92,.6)]"
+                            className="absolute z-20 h-2.5 w-2.5 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(1,230,255,.11),0_0_22px_rgba(1,230,255,.6)]"
                             animate={{
                                 left: ['0%', '82%'],
                                 top: ['52%', '52%'],
@@ -231,7 +231,7 @@ export function ServiceProductionSystem() {
                         />
                     )}
 
-                    <span className="relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 bg-card text-foreground shadow-[0_0_0_7px_rgba(0,224,92,.05),0_18px_45px_-25px_rgba(0,224,92,.5)]">
+                    <span className="relative z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 bg-card text-foreground shadow-[0_0_0_7px_rgba(1,230,255,.05),0_18px_45px_-25px_rgba(1,230,255,.5)]">
                         <Layers3 className="h-4 w-4" />
                     </span>
                 </div>

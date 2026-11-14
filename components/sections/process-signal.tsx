@@ -38,7 +38,7 @@ export function ProcessSignal() {
     return (
         <div
             aria-hidden="true"
-            className="group relative min-h-[300px] overflow-hidden rounded-[2rem] border border-white/[0.12] bg-white/[0.035] p-6 shadow-[0_40px_100px_-60px_rgba(0,0,0,.85)] backdrop-blur-xl xl:p-7"
+            className="group relative min-h-[300px] overflow-hidden rounded-none border border-white/[0.12] bg-white/[0.035] p-6 shadow-[0_40px_100px_-60px_rgba(0,0,0,.85)] backdrop-blur-xl xl:p-7"
         >
             {/* Background texture */}
             <div className="grid-lines pointer-events-none absolute inset-0 opacity-[0.08]" />
@@ -81,7 +81,7 @@ export function ProcessSignal() {
 
                     {!shouldReduceMotion && (
                         <motion.span
-                            className="absolute -top-[5px] h-[11px] w-[11px] rounded-full border-2 border-navy-950 bg-accent shadow-[0_0_0_5px_rgba(0,224,92,.10),0_0_22px_rgba(0,224,92,.65)]"
+                            className="absolute -top-[5px] h-[11px] w-[11px] rounded-full border-2 border-navy-950 bg-accent shadow-[0_0_0_5px_rgba(1,230,255,.10),0_0_22px_rgba(1,230,255,.65)]"
                             animate={{
                                 left: ['0%', 'calc(100% - 11px)'],
                             }}
@@ -112,7 +112,7 @@ export function ProcessSignal() {
                                             : {
                                                 borderColor: [
                                                     'rgba(255,255,255,.14)',
-                                                    'rgba(0,224,92,.72)',
+                                                    'rgba(1,230,255,.72)',
                                                     'rgba(255,255,255,.14)',
                                                 ],
                                             }

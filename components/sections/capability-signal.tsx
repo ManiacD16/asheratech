@@ -32,7 +32,7 @@ export function CapabilitySignal() {
   return (
     <div
       aria-hidden="true"
-      className="surface-depth group relative h-[300px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.45)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.85)]"
+      className="surface-depth group relative h-[300px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.45)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.85)]"
     >
       {/* Background grid */}
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
@@ -76,7 +76,7 @@ export function CapabilitySignal() {
 
           {!shouldReduceMotion && (
             <motion.span
-              className="absolute -top-[5px] h-[11px] w-[11px] rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(0,224,92,.12),0_0_24px_rgba(0,224,92,.6)]"
+              className="absolute -top-[5px] h-[11px] w-[11px] rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(1,230,255,.12),0_0_24px_rgba(1,230,255,.6)]"
               animate={{
                 left: ['0%', 'calc(100% - 11px)'],
               }}

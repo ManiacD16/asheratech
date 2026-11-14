@@ -57,7 +57,7 @@ export function ContactForm() {
         tabIndex={-1}
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="surface-depth relative flex min-h-[580px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-border bg-card p-8 text-center shadow-[0_40px_100px_-60px_rgba(24,31,56,.55)]"
+        className="surface-depth relative flex min-h-[580px] flex-col items-center justify-center overflow-hidden rounded-none border border-border bg-card p-8 text-center shadow-[0_40px_100px_-60px_rgba(24,31,56,.55)]"
       >
         <span className="icon-orbit inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent/15 text-accentText">
           <CheckCircle2 className="h-8 w-8" />
@@ -85,7 +85,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit}
       aria-busy={status === 'submitting'}
-      className="surface-depth relative overflow-hidden rounded-[2rem] border border-border bg-card p-6 shadow-[0_40px_100px_-60px_rgba(24,31,56,.55)] sm:p-9 md:p-12"
+      className="surface-depth relative overflow-hidden rounded-none border border-border bg-card p-6 shadow-[0_40px_100px_-60px_rgba(24,31,56,.55)] sm:p-9 md:p-12"
     >
       <div className="mb-10 flex items-center justify-between border-b border-border pb-5">
         <div>

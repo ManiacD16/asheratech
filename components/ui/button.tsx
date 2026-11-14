@@ -57,7 +57,7 @@ export function Button({
         onMouseLeave={reset}
         data-cursor="Open"
         className={cn(
-          'group relative inline-flex min-h-[3.25rem] items-center justify-center overflow-hidden rounded-full px-6 text-sm font-semibold transition duration-300 ease-out',
+          'group relative inline-flex min-h-[3.25rem] items-center justify-center overflow-hidden px-6 text-sm font-medium transition duration-300 ease-out',
           variant !== 'text' && 'button-glint',
           variants[variant],
           className,
@@ -69,7 +69,7 @@ export function Button({
         >
           <span>{children}</span>
           {showArrow && (
-            <span className="icon-orbit border-current/20 group-hover:border-current/35 inline-flex h-7 w-7 items-center justify-center rounded-full border transition-colors duration-300">
+            <span className="icon-orbit border-current/20 group-hover:border-current/35 inline-flex h-7 w-7 items-center justify-center border transition-colors duration-300">
               <ArrowUpRight
                 aria-hidden="true"
                 className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

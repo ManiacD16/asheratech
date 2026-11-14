@@ -59,7 +59,7 @@ export function EngagementFocusMap() {
     <div
       role="img"
       aria-label="Engagement focus map showing discovery, experience design, architecture and modernization intervention options."
-      className="surface-depth group relative min-h-[340px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.95)] xl:p-7"
+      className="surface-depth group relative min-h-[340px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.95)] xl:p-7"
     >
       {/* Background */}
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black,transparent_86%)]" />
@@ -157,7 +157,7 @@ export function EngagementFocusMap() {
           {!shouldReduceMotion && (
             <motion.span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-3 h-px bg-gradient-to-r from-transparent via-accent to-transparent shadow-[0_0_18px_rgba(0,224,92,.45)]"
+              className="pointer-events-none absolute inset-x-3 h-px bg-gradient-to-r from-transparent via-accent to-transparent shadow-[0_0_18px_rgba(1,230,255,.45)]"
               animate={{
                 top: ['14%', '86%', '14%'],
               }}
@@ -173,7 +173,7 @@ export function EngagementFocusMap() {
           <div className="pointer-events-none absolute left-[68%] top-[39%] -translate-x-1/2 -translate-y-1/2">
             <span className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full border border-accent/25 motion-reduce:animate-none" />
 
-            <span className="relative block h-3 w-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_6px_rgba(0,224,92,.12),0_0_24px_rgba(0,224,92,.6)]" />
+            <span className="relative block h-3 w-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_6px_rgba(1,230,255,.12),0_0_24px_rgba(1,230,255,.6)]" />
           </div>
 
           <div className="pointer-events-none absolute right-3 top-[27%] rounded-xl border border-accent/25 bg-card/95 px-3 py-2 shadow-[0_16px_40px_-24px_rgba(24,31,56,.6)] backdrop-blur-xl">

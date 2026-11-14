@@ -84,7 +84,7 @@ export function ProjectCard({
               } as CSSProperties
             }
             className={cn(
-              'project-spotlight surface-depth relative overflow-hidden rounded-[2rem] will-change-transform',
+              'project-spotlight surface-depth relative overflow-hidden rounded-none will-change-transform',
               reverse && 'lg:order-2',
             )}
           >
@@ -159,7 +159,7 @@ export function ProjectCard({
           onPointerMove={handlePointerMove}
           onPointerLeave={resetTilt}
           style={{ rotateX, rotateY, transformPerspective: 1200 }}
-          className="project-spotlight surface-depth relative overflow-hidden rounded-[1.8rem] will-change-transform"
+          className="project-spotlight surface-depth relative overflow-hidden rounded-none will-change-transform"
         >
           <ProjectVisual
             project={project}

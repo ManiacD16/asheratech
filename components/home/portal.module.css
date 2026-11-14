@@ -1,0 +1,122 @@
+.portal {
+  position: relative;
+  height: 320svh;
+  background: var(--color-ink);
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  display: grid;
+  height: 100svh;
+  place-items: center;
+  overflow: hidden;
+}
+
+.frame {
+  --notch: 18px;
+  position: relative;
+  width: min(34vw, 68svh * 0.8, 520px);
+  aspect-ratio: 4 / 5;
+  padding: 10px;
+  background: linear-gradient(
+    155deg,
+    var(--color-cyan),
+    var(--color-azure) 34%,
+    var(--color-royal) 68%,
+    var(--color-cyan)
+  );
+  will-change: transform;
+}
+
+.sheet {
+  --notch: 18px;
+  --notch-out: 10px;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  padding: clamp(20px, 2.6vw, 44px);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.text {
+  max-width: 21ch;
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 1.72vw, 27px);
+  line-height: 1.2;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.cue {
+  position: absolute;
+  bottom: clamp(28px, 6svh, 56px);
+  left: 50%;
+  padding-bottom: 12px;
+  transform: translateX(-50%);
+  color: var(--color-paper);
+  font-size: var(--text-label);
+  white-space: nowrap;
+}
+
+.cue::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+  transform-origin: left;
+  animation: cue 2.4s var(--ease-in-out) infinite;
+}
+
+@keyframes cue {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  48% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  52% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .portal {
+    height: 280svh;
+  }
+
+  .frame {
+    width: min(78vw, 60svh * 0.8);
+  }
+
+  .text {
+    font-size: clamp(17px, 4.9vw, 22px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal {
+    height: auto;
+    padding-block: var(--section-padding-block);
+  }
+
+  .stage {
+    position: static;
+    height: auto;
+    gap: var(--space-xl);
+  }
+
+  .cue {
+    display: none;
+  }
+}

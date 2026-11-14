@@ -121,7 +121,7 @@ export default async function InsightPage({
               <Link
                 href={`/insights/${nextInsight.slug}`}
                 data-cursor="Read"
-                className="surface-depth kinetic-rule group grid gap-8 rounded-[1.8rem] border border-border bg-surface/55 p-8 transition hover:border-foreground/20 md:p-11 lg:grid-cols-[1fr_auto] lg:items-end"
+                className="surface-depth kinetic-rule group grid gap-8 rounded-none border border-border bg-surface/55 p-8 transition hover:border-foreground/20 md:p-11 lg:grid-cols-[1fr_auto] lg:items-end"
               >
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">

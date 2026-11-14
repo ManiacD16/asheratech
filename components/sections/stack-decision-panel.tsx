@@ -47,7 +47,7 @@ export function StackDecisionPanel() {
     <div
       role="img"
       aria-label="Blockchain architecture panel highlighting smart-contract, wallet and identity infrastructure."
-      className="surface-depth group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:p-7"
+      className="surface-depth group relative min-h-[360px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:p-7"
     >
       <BlockchainNetworkBackground className="opacity-35" />
 
@@ -132,7 +132,7 @@ export function StackDecisionPanel() {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <div className="relative flex h-[92px] w-[92px] items-center justify-center rounded-full border border-accent/35 bg-card shadow-[0_0_0_8px_rgba(0,224,92,.05),0_20px_50px_-25px_rgba(0,224,92,.45)]">
+          <div className="relative flex h-[92px] w-[92px] items-center justify-center rounded-full border border-accent/35 bg-card shadow-[0_0_0_8px_rgba(1,230,255,.05),0_20px_50px_-25px_rgba(1,230,255,.45)]">
             {!shouldReduceMotion && (
               <motion.span
                 className="absolute inset-0 rounded-full border border-accent/30"

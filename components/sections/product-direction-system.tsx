@@ -50,7 +50,7 @@ export function ProductDirectionSystem() {
     <div
       role="img"
       aria-label="Four disciplines—product strategy, experience design, software engineering, and fintech and Web3—converging into one shared product direction."
-      className="group relative min-h-[350px] overflow-hidden rounded-[2rem] border border-white/[0.12] bg-white/[0.035] p-6 shadow-[0_40px_100px_-60px_rgba(0,0,0,.88)] backdrop-blur-xl xl:p-7"
+      className="group relative min-h-[350px] overflow-hidden rounded-none border border-white/[0.12] bg-white/[0.035] p-6 shadow-[0_40px_100px_-60px_rgba(0,0,0,.88)] backdrop-blur-xl xl:p-7"
     >
       {/* Background */}
       <div
@@ -120,7 +120,7 @@ export function ProductDirectionSystem() {
               key={path}
               d={path}
               fill="none"
-              stroke="rgb(0 224 92)"
+              stroke="rgb(1 230 255)"
               strokeWidth="0.42"
               strokeLinecap="round"
               initial={
@@ -212,7 +212,7 @@ export function ProductDirectionSystem() {
             <>
               <motion.span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-[1.6rem] border border-accent/35"
+                className="absolute inset-0 rounded-none border border-accent/35"
                 animate={{
                   scale: [1, 1.28],
                   opacity: [0.5, 0],
@@ -226,7 +226,7 @@ export function ProductDirectionSystem() {
 
               <motion.span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-[1.6rem] border border-accent/25"
+                className="absolute inset-0 rounded-none border border-accent/25"
                 animate={{
                   scale: [1, 1.42],
                   opacity: [0.35, 0],
@@ -254,7 +254,7 @@ export function ProductDirectionSystem() {
               repeat: Infinity,
               ease: 'easeInOut',
             }}
-            className="relative flex h-[94px] w-[94px] flex-col items-center justify-center rounded-[1.65rem] border border-accent/50 bg-navy-950 shadow-[0_0_0_8px_rgba(0,224,92,.05),0_26px_65px_-30px_rgba(0,224,92,.55)]"
+            className="relative flex h-[94px] w-[94px] flex-col items-center justify-center rounded-none border border-accent/50 bg-navy-950 shadow-[0_0_0_8px_rgba(1,230,255,.05),0_26px_65px_-30px_rgba(1,230,255,.55)]"
           >
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-navy-950">
               <Target className="h-4 w-4" />

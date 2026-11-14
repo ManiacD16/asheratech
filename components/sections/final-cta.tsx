@@ -1,84 +1,74 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import { Container } from '@/components/ui/container';
+import { siteConfig } from '@/data/site';
+import { LogoMark } from '@/components/layout/logo';
 import { Reveal } from '@/components/motion/reveal';
 
+/**
+ * Closing invitation shown at the end of inner pages: an ink panel with
+ * concave corners set on the paper surface, so it reads as a card on the
+ * table rather than a second footer.
+ */
 export function FinalCta() {
   return (
     <section
       data-chapter="Contact"
-      className="relative overflow-hidden bg-navy-900 py-16 text-white md:py-20 lg:py-24"
+      className="relative bg-paper px-[var(--section-padding-inline)] py-16 md:py-20 lg:py-24"
     >
-      <div className="noise" />
-      <div className="grid-lines absolute inset-0 opacity-[0.055]" />
-      <span className="absolute -left-16 top-10 h-56 w-56 rounded-full border border-accent/20" />
-      <span className="absolute -left-6 top-20 h-32 w-32 rounded-full bg-accent/15 blur-3xl" />
-      <span className="absolute -right-10 bottom-0 h-64 w-64 rounded-full bg-accent/10 blur-[80px]" />
-
-      <Container className="relative">
-        <Reveal>
+      <Reveal>
+        <div
+          className="notched bg-[linear-gradient(120deg,var(--color-cyan),var(--color-royal)_38%,var(--color-azure)_72%,var(--color-cyan))] p-[3px]"
+          style={{ '--notch': '22px' } as React.CSSProperties}
+        >
           <Link
             href="/contact"
             data-cursor="Start"
-            className="group block border-y border-white/15 py-8 md:py-10"
+            className="notched group relative grid gap-10 overflow-hidden bg-ink px-6 py-12 text-paper md:px-14 md:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-20 lg:py-20"
+            style={
+              { '--notch': '22px', '--notch-out': '3px' } as React.CSSProperties
+            }
           >
-            <div className="flex items-center justify-between gap-8 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
-              <span className="flex items-center gap-3">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-[9px] border border-cyan/40"
+            />
+            <div className="relative">
+              <p className="flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cyan">
+                <span className="diamond" aria-hidden="true" />
                 Start with clarity
+              </p>
+              <h2 className="mt-6 max-w-[11ch] text-[clamp(3.4rem,7.4vw,8rem)] leading-[0.84] text-paper">
+                Have a complex product to build?
+              </h2>
+              <p className="mt-7 max-w-xl font-serif text-xl leading-[1.25] text-paper/75 md:text-2xl">
+                Bring us the ambition, constraints and unanswered questions.
+                We&apos;ll turn them into a focused path forward.
+              </p>
+              <span className="mt-9 inline-flex min-h-[3.25rem] items-center gap-4 border-b border-paper/30 pb-1 text-base transition-colors duration-300 group-hover:border-cyan group-hover:text-cyan">
+                Start a project
+                <svg aria-hidden="true" viewBox="0 0 24 10" className="w-6 transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-1.5">
+                  <path
+                    d="M0 5h22M18 1l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                  />
+                </svg>
               </span>
-              <span className="hidden sm:block">New business / 2026</span>
+              <p className="mt-8 text-sm text-paper/55">
+                Typical response within two business days ·{' '}
+                {siteConfig.email}
+              </p>
             </div>
 
-            <div className="mt-8 grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center xl:gap-14">
-              <div className="relative z-10">
-                <h2 className="max-w-[8ch] text-[clamp(3.2rem,6vw,6.8rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-white">
-                  Have a complex{' '}
-                  <span className="headline-outline ![-webkit-text-stroke-color:rgba(255,255,255,.92)]">
-                    product to build?
-                  </span>
-                </h2>
-                <p className="mt-6 max-w-xl text-base leading-8 text-white/[0.58] md:text-lg">
-                  Bring us the ambition, constraints and unanswered questions.
-                  We’ll turn them into a focused path forward.
-                </p>
-                <span className="mt-8 inline-flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.16em] text-white">
-                  <span className="icon-orbit button-glint inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-accent text-navy-950 transition duration-700 group-hover:rotate-45 group-hover:scale-110">
-                    <ArrowUpRight className="h-5 w-5" />
-                  </span>
-                  Let&apos;s work together
-                </span>
-              </div>
-
-              <div className="relative mx-auto w-full max-w-[780px]">
-                <div className="absolute inset-[18%] rounded-full bg-accent/10 blur-[90px]" />
-                <Image
-                  src="/images/asheratech/closing-cta.png"
-                  alt="AsheraTech closing artwork connecting product engineering, cloud, cybersecurity, UI/UX, mobile, data and API integration."
-                  width={1536}
-                  height={1024}
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="relative h-auto w-full object-contain drop-shadow-[0_34px_72px_rgba(0,0,0,.48)] transition-transform duration-700 group-hover:scale-[1.015]"
-                />
-              </div>
+            <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[520px]">
+              <LogoMark
+                size={520}
+                className="w-full transition-transform duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:-rotate-3 group-hover:scale-[1.03]"
+              />
             </div>
           </Link>
-
-          <div className="mt-8 flex flex-col gap-3 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
-            <span>Typical response: within two business days</span>
-            <a
-              href="mailto:contact@asheraatech.com"
-              className="link-line inline-flex min-h-11 w-fit items-center font-semibold text-white/70 hover:text-signal"
-            >
-              contact@asheraatech.com
-            </a>
-          </div>
-        </Reveal>
-      </Container>
+        </div>
+      </Reveal>
     </section>
   );
 }

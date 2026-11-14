@@ -46,7 +46,7 @@ export default function InsightsPage() {
                 <Link
                   href={`/insights/${insight.slug}`}
                   data-cursor="Read"
-                  className={`surface-depth kinetic-rule group flex h-full flex-col rounded-[1.7rem] border border-border bg-card p-7 transition duration-500 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-card md:p-10 ${index === 0 ? 'min-h-[460px]' : 'min-h-[380px]'}`}
+                  className={`surface-depth kinetic-rule group flex h-full flex-col rounded-none border border-border bg-card p-7 transition duration-500 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-card md:p-10 ${index === 0 ? 'min-h-[460px]' : 'min-h-[380px]'}`}
                 >
                   <div className="flex items-center justify-between text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted">
                     <span>{insight.category}</span>

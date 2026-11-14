@@ -51,7 +51,7 @@ export function InsightSignalBoard() {
   return (
     <div
       aria-hidden="true"
-      className="surface-depth group relative min-h-[320px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/80 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.95)] xl:p-7"
+      className="surface-depth group relative min-h-[320px] overflow-hidden rounded-none border border-border/80 bg-card/80 p-6 shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.95)] xl:p-7"
     >
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black,transparent_86%)]" />
 

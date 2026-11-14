@@ -37,7 +37,7 @@ export function DomainLeverageMap() {
   return (
     <div
       aria-hidden="true"
-      className="surface-depth group relative h-[320px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/80 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:h-[340px]"
+      className="surface-depth group relative h-[320px] overflow-hidden rounded-none border border-border/80 bg-card/80 shadow-[0_35px_90px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_35px_90px_-55px_rgba(0,0,0,.9)] xl:h-[340px]"
     >
       {/* Background texture */}
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black,transparent_82%)]" />
@@ -124,12 +124,12 @@ export function DomainLeverageMap() {
 
       {/* Rotating signal */}
       <div className="pointer-events-none absolute left-1/2 top-[53%] z-10 h-44 w-44 -translate-x-1/2 -translate-y-1/2 animate-[spin_12s_linear_infinite] rounded-full motion-reduce:animate-none">
-        <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(0,224,92,.1),0_0_22px_rgba(0,224,92,.55)]" />
+        <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(1,230,255,.1),0_0_22px_rgba(1,230,255,.55)]" />
       </div>
 
       {/* Central hub */}
       <div className="absolute left-1/2 top-[53%] z-10 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex h-24 w-24 flex-col items-center justify-center rounded-[1.6rem] border border-border bg-card shadow-[0_24px_60px_-30px_rgba(24,31,56,.55)] transition duration-700 group-hover:border-accent/60 group-hover:shadow-[0_24px_70px_-30px_rgba(0,224,92,.35)]">
+        <div className="flex h-24 w-24 flex-col items-center justify-center rounded-none border border-border bg-card shadow-[0_24px_60px_-30px_rgba(24,31,56,.55)] transition duration-700 group-hover:border-accent/60 group-hover:shadow-[0_24px_70px_-30px_rgba(1,230,255,.35)]">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-accent/[0.15] text-foreground">
             <Network className="h-4 w-4" />
           </span>

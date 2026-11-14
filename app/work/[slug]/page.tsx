@@ -190,7 +190,7 @@ export default async function ProjectPage({
                 {project.metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="surface-depth rounded-[1.5rem] border border-border bg-card p-7 transition duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9"
+                    className="surface-depth rounded-none border border-border bg-card p-7 transition duration-500 hover:-translate-y-1 hover:border-accent/50 md:p-9"
                   >
                     <p className="text-4xl font-semibold tracking-[-0.045em] text-foreground md:text-5xl">
                       {metric.value}
@@ -217,7 +217,7 @@ export default async function ProjectPage({
               <Link
                 href={`/work/${nextProject.slug}`}
                 data-cursor="View"
-                className="surface-depth kinetic-rule group grid gap-8 rounded-[2rem] border border-border bg-card p-8 transition duration-500 hover:border-foreground/20 hover:shadow-card md:p-12 lg:grid-cols-[1fr_auto] lg:items-end"
+                className="surface-depth kinetic-rule group grid gap-8 rounded-none border border-border bg-card p-8 transition duration-500 hover:border-foreground/20 hover:shadow-card md:p-12 lg:grid-cols-[1fr_auto] lg:items-end"
               >
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">

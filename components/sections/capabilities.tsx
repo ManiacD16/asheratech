@@ -70,7 +70,7 @@ export function Capabilities() {
                   style={
                     { '--spot-x': '50%', '--spot-y': '50%' } as CSSProperties
                   }
-                  className="spotlight-card surface-depth kinetic-rule group relative flex h-full min-h-[350px] flex-col overflow-hidden rounded-[1.9rem] border border-border bg-card p-7 transition duration-700 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] md:min-h-[390px] md:p-9"
+                  className="spotlight-card surface-depth kinetic-rule group relative flex h-full min-h-[350px] flex-col overflow-hidden rounded-none border border-border bg-card p-7 transition duration-700 hover:-translate-y-1.5 hover:border-foreground/20 hover:shadow-[0_35px_90px_-55px_rgba(24,31,56,.55)] md:min-h-[390px] md:p-9"
                 >
                    <CapabilityCardGraphic variant={index} />
                   <div className="relative z-10 flex items-start justify-between">

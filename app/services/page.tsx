@@ -56,7 +56,7 @@ export default function ServicesPage() {
                 <Reveal key={practice.slug}>
                   <article
                     id={practice.slug}
-                    className="surface-depth scroll-mt-28 overflow-hidden rounded-[1.8rem] border border-border bg-card"
+                    className="surface-depth scroll-mt-28 overflow-hidden rounded-none border border-border bg-card"
                   >
                     <div className="grid lg:grid-cols-[0.86fr_1.14fr]">
                       <div className="relative flex min-h-[310px] flex-col overflow-hidden bg-surface p-7 md:p-10">
@@ -141,7 +141,7 @@ export default function ServicesPage() {
                   delay={index * 0.045}
                   className="h-full"
                 >
-                  <article className="surface-depth kinetic-rule h-full rounded-[1.5rem] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-card">
+                  <article className="surface-depth kinetic-rule h-full rounded-none border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-card">
                     <span className="icon-orbit inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface">
                       <Icon className="h-5 w-5 text-accentText" />
                     </span>

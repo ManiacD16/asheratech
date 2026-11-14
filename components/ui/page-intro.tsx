@@ -1,4 +1,4 @@
-import { ArrowDownRight } from 'lucide-react';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { Reveal } from '@/components/motion/reveal';
 
@@ -18,64 +18,38 @@ export function PageIntro({
   return (
     <section
       data-chapter="Overview"
-      className="relative min-h-[64svh] overflow-hidden border-b border-border pb-14 pt-28 md:pb-16 md:pt-32 lg:flex lg:min-h-[700px] lg:items-end lg:pb-20 lg:pt-36"
+      className="dark relative overflow-hidden bg-background pb-16 pt-32 md:pb-20 md:pt-40 lg:flex lg:min-h-[86svh] lg:items-end lg:pb-24"
     >
-      <div className="grid-lines absolute inset-0 opacity-30" />
-      <div className="noise" />
-      <span className="absolute right-[5%] top-24 h-72 w-72 rounded-full bg-accent/[0.075] blur-[100px]" />
-      <span
+      <Image
+        src="/brand/asheraatech-mark-line.svg"
+        alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[0.25em] -left-[0.04em] select-none text-[28vw] font-semibold leading-none tracking-[-0.1em] text-foreground/[0.018]"
-      >
-        A
-      </span>
-      <div
-        aria-hidden="true"
-        className="absolute right-[8%] top-[24%] hidden h-36 w-36 rounded-full border border-border/80 lg:block"
-      >
-        <span className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent" />
-        <span className="absolute left-1/2 top-1/2 h-px w-48 origin-left rotate-[28deg] bg-border/80" />
-      </div>
+        width={1312}
+        height={1199}
+        unoptimized
+        priority
+        className="pointer-events-none absolute -right-[12%] top-[8%] w-[min(72vw,980px)] max-w-none select-none opacity-70"
+      />
       <Container className="relative w-full">
-        <div className="text-micro mb-8 flex items-center justify-between border-b border-border pb-4 text-muted md:mb-10">
-          <span className="flex items-center gap-3">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            {eyebrow}
-          </span>
-          <span>Asheraatech / Studio index</span>
-        </div>
-        <div className="grid gap-10 lg:grid-cols-[1.34fr_0.66fr] lg:items-end lg:gap-14">
+        <p className="mb-8 flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-cyan md:mb-10">
+          <span className="diamond" aria-hidden="true" />
+          {eyebrow}
+        </p>
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-end lg:gap-16">
           <Reveal variant="mask">
-            <span className="eyebrow">{eyebrow}</span>
-            <h1 className="max-w-[14ch] text-[clamp(3.75rem,8.2vw,8.5rem)] font-semibold leading-[0.865] tracking-[-0.075em] text-foreground">
+            <h1 className="max-w-[17ch] text-[clamp(4rem,9.6vw,10.5rem)] leading-[0.84] text-foreground">
               {title}
             </h1>
           </Reveal>
-          <Reveal delay={0.1} variant="scale" className="lg:pb-2">
+          <Reveal delay={0.1} className="lg:pb-3">
             <div>
-              {visual && (
-                <div className="mb-7 hidden lg:block">
-                  {visual}
-                </div>
-              )}
+              {visual && <div className="mb-8 hidden lg:block">{visual}</div>}
 
-              <div className="relative border-l border-border pl-6 md:pl-8">
-                <span className="absolute -left-[3px] top-0 h-1.5 w-1.5 rounded-full bg-accent" />
+              <p className="max-w-xl font-serif text-[clamp(1.35rem,1.94vw,1.95rem)] leading-[1.18] text-foreground">
+                {description}
+              </p>
 
-                <p className="max-w-xl text-lg leading-9 text-muted md:text-xl md:leading-9">
-                  {description}
-                </p>
-
-                {aside && <div className="mt-8">{aside}</div>}
-
-                <div className="text-micro mt-10 flex items-center gap-3 text-muted">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card">
-                    <ArrowDownRight className="h-4 w-4" />
-                  </span>
-
-                  Continue through the studio
-                </div>
-              </div>
+              {aside && <div className="mt-8">{aside}</div>}
             </div>
           </Reveal>
         </div>

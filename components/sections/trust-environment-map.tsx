@@ -70,7 +70,7 @@ export function TrustEnvironmentMap() {
     <div
       role="img"
       aria-label="Operational confidence system connecting fintech, digital assets, mobile and enterprise environments with trust, access, transaction state and operational clarity."
-      className="surface-depth group relative min-h-[330px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
+      className="surface-depth group relative min-h-[330px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
     >
       {/* Background */}
       <div
@@ -166,7 +166,7 @@ export function TrustEnvironmentMap() {
         {!shouldReduceMotion && (
           <motion.span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 z-20 w-px bg-gradient-to-b from-transparent via-accent to-transparent shadow-[0_0_18px_rgba(0,224,92,.5)]"
+            className="pointer-events-none absolute inset-y-0 z-20 w-px bg-gradient-to-b from-transparent via-accent to-transparent shadow-[0_0_18px_rgba(1,230,255,.5)]"
             animate={{
               left: ['2%', '98%', '2%'],
             }}

@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  height: 150svh;
+  min-height: 900px;
+  overflow: clip;
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.tagline {
+  position: absolute;
+  top: clamp(96px, 13.4svh, 132px);
+  left: var(--section-padding-inline);
+  right: var(--section-padding-inline);
+  color: var(--color-cyan);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.titleBox {
+  position: absolute;
+  top: clamp(128px, 17.5svh, 176px);
+  left: var(--section-padding-inline);
+  right: var(--section-padding-inline);
+}
+
+.title {
+  position: relative;
+  display: block;
+  font-size: 21.5vw;
+  line-height: 0.8;
+}
+
+.titleLine {
+  position: relative;
+  display: inline-block;
+  line-height: 0.8;
+}
+
+.fill {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.charMask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.04em;
+  vertical-align: bottom;
+}
+
+.char {
+  display: inline-block;
+  will-change: transform;
+}
+
+.echo {
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: transparent;
+  opacity: 0;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--color-cyan) 70%, var(--color-paper));
+  will-change: transform, opacity;
+}
+
+/* 3D stage ---------------------------------------------------------------- */
+
+.stage {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 2;
+  height: 100svh;
+  min-height: 600px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s var(--ease-out);
+}
+
+.canvasReady {
+  opacity: 1;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding-top: 12svh;
+  transition: opacity 0.6s ease;
+}
+
+.posterMark {
+  width: min(46vw, 62svh);
+  opacity: 0.92;
+}
+
+.posterHidden {
+  opacity: 0;
+}
+
+/* Captions ---------------------------------------------------------------- */
+
+.captions {
+  position: absolute;
+  top: calc(100svh - clamp(74px, 9svh, 96px));
+  left: var(--section-padding-inline);
+  right: var(--section-padding-inline);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-muted-on-dark);
+  font-size: var(--text-label);
+  line-height: 1.45;
+}
+
+.captionEnd {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: 132svh;
+    min-height: 720px;
+  }
+
+  .titleBox {
+    top: clamp(132px, 19svh, 180px);
+  }
+
+  .posterMark {
+    width: 74vw;
+  }
+}

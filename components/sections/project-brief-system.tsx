@@ -54,7 +54,7 @@ export function ProjectBriefSystem() {
         <div
             role="img"
             aria-label="Project briefing system that turns opportunity, constraints and urgency into a clear next step."
-            className="surface-depth group relative min-h-[318px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.58)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
+            className="surface-depth group relative min-h-[318px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.58)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
         >
             {/* Background */}
             <div
@@ -167,7 +167,7 @@ export function ProjectBriefSystem() {
                     {!shouldReduceMotion && (
                         <motion.span
                             aria-hidden="true"
-                            className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(0,224,92,.11),0_0_22px_rgba(0,224,92,.6)]"
+                            className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-card bg-accent shadow-[0_0_0_5px_rgba(1,230,255,.11),0_0_22px_rgba(1,230,255,.6)]"
                             animate={{
                                 top: ['7%', '88%', '7%'],
                             }}

@@ -8,7 +8,7 @@ export function StudioNote() {
     <section data-chapter="Point of view" className="section-shell">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2.2rem] border border-border bg-card p-8 shadow-[0_40px_100px_-65px_rgba(24,31,56,.5)] md:p-12 lg:p-16 xl:p-20">
+          <div className="relative overflow-hidden rounded-none border border-border bg-card p-8 shadow-[0_40px_100px_-65px_rgba(24,31,56,.5)] md:p-12 lg:p-16 xl:p-20">
             <span
               aria-hidden="true"
               className="absolute -left-[0.04em] -top-[0.35em] select-none text-[18rem] font-semibold leading-none text-accentText/[0.08]"

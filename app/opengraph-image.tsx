@@ -14,7 +14,7 @@ export default function OpenGraphImage() {
         display: 'flex',
         position: 'relative',
         overflow: 'hidden',
-        background: '#162136',
+        background: '#0f0b4d',
         color: '#ffffff',
         padding: '72px 76px',
         fontFamily: 'sans-serif',
@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
           width: 380,
           height: 380,
           borderRadius: 999,
-          background: '#00e05c',
+          background: '#01e6ff',
           filter: 'blur(130px)',
           opacity: 0.16,
           right: -80,
@@ -62,7 +62,7 @@ export default function OpenGraphImage() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#162136',
+              color: '#0f0b4d',
               fontWeight: 800,
               fontSize: 24,
             }}
@@ -70,7 +70,7 @@ export default function OpenGraphImage() {
             A
           </div>
           <div style={{ fontSize: 26, fontWeight: 700 }}>
-            Asheraa<span style={{ color: '#00e05c' }}>tech</span>
+            Asheraa<span style={{ color: '#01e6ff' }}>tech</span>
           </div>
         </div>
         <div
@@ -83,7 +83,7 @@ export default function OpenGraphImage() {
           }}
         >
           Compile complexity into{' '}
-          <span style={{ color: '#00e05c' }}>progress.</span>
+          <span style={{ color: '#01e6ff' }}>progress.</span>
         </div>
         <div
           style={{

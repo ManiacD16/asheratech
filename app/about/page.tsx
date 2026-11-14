@@ -53,14 +53,14 @@ export default function AboutPage() {
         }
         description="We are a digital product and engineering agency for teams solving difficult problems. Our job is to organize complexity into decisions, systems and products people can trust."
         visual={
-          <div className="relative overflow-hidden rounded-[1.4rem] border border-border bg-card/70 p-2">
+          <div className="relative overflow-hidden rounded-none border border-border bg-card/70 p-2">
             <Image
               src="/images/asheratech/asheratech-engineering-ecosystem.png"
               alt="AsheraTech engineering ecosystem connecting product interfaces, cloud infrastructure, identity, blockchain and tokenized assets."
               width={1672}
               height={941}
               sizes="360px"
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
             />
           </div>
         }
@@ -147,7 +147,7 @@ export default function AboutPage() {
               </div>
             </div>
           </Reveal>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/10 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-none border border-white/10 bg-white/10 md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
             {uniqueDisciplines.map((discipline, index) => (
               <Reveal key={discipline} delay={index * 0.06}>
                 <div className="kinetic-rule group min-h-[250px] bg-navy-950 p-7 transition duration-700 hover:bg-white/[0.055] md:p-8">
@@ -184,7 +184,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16">
             {values.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.06} className="h-full">
-                <article className="surface-depth kinetic-rule h-full rounded-[1.55rem] border border-border bg-card p-7 md:p-9">
+                <article className="surface-depth kinetic-rule h-full rounded-none border border-border bg-card p-7 md:p-9">
                   <div className="flex items-center justify-between">
                     <span className="icon-orbit inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface">
                       <CheckCircle2 className="h-5 w-5 text-accentText" />

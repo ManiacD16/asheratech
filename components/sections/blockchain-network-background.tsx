@@ -56,7 +56,7 @@ export function BlockchainNetworkBackground({
       aria-hidden="true"
       className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_42%,rgba(0,224,92,.13),transparent_31%),radial-gradient(circle_at_18%_78%,rgba(0,224,92,.06),transparent_26%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_42%,rgba(1,230,255,.13),transparent_31%),radial-gradient(circle_at_18%_78%,rgba(1,230,255,.06),transparent_26%)]" />
 
       <svg
         viewBox="0 0 100 100"
@@ -79,7 +79,7 @@ export function BlockchainNetworkBackground({
 
             <stop
               offset="0.5"
-              stopColor="rgb(0 224 92)"
+              stopColor="rgb(1 230 255)"
               stopOpacity="0.48"
             />
 
@@ -134,7 +134,7 @@ export function BlockchainNetworkBackground({
                 cy={node.y}
                 r="1.3"
                 fill="none"
-                stroke="rgb(0 224 92)"
+                stroke="rgb(1 230 255)"
                 strokeWidth="0.16"
                 vectorEffect="non-scaling-stroke"
                 animate={
@@ -185,7 +185,7 @@ export function BlockchainNetworkBackground({
       </svg>
 
       <motion.div
-        className="absolute right-[7%] top-[15%] h-44 w-44 rounded-[2.2rem] border border-accent/20 bg-card/[0.035] backdrop-blur-[2px]"
+        className="absolute right-[7%] top-[15%] h-44 w-44 rounded-none border border-accent/20 bg-card/[0.035] backdrop-blur-[2px]"
         animate={
           shouldReduceMotion
             ? undefined
@@ -200,11 +200,11 @@ export function BlockchainNetworkBackground({
           ease: 'easeInOut',
         }}
       >
-        <div className="absolute inset-5 rotate-45 rounded-[1.35rem] border border-border/40" />
+        <div className="absolute inset-5 rotate-45 rounded-none border border-border/40" />
 
         <div className="absolute inset-12 rotate-45 rounded-xl border border-accent/30 bg-accent/[0.04]" />
 
-        <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_0_7px_rgba(0,224,92,.09),0_0_28px_rgba(0,224,92,.45)]" />
+        <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_0_7px_rgba(1,230,255,.09),0_0_28px_rgba(1,230,255,.45)]" />
       </motion.div>
 
       <motion.div

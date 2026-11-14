@@ -71,7 +71,7 @@ export default function ContactPage() {
                     </li>
                   ))}
                 </ol>
-                <div className="surface-depth mt-10 rounded-[1.4rem] bg-navy-950 p-6 text-white">
+                <div className="surface-depth mt-10 rounded-none bg-navy-950 p-6 text-white">
                   <span className="icon-orbit inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/15 bg-white/[0.05]">
                     <Mail className="h-5 w-5 text-signal" />
                   </span>

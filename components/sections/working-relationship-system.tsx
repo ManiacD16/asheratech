@@ -37,7 +37,7 @@ export function WorkingRelationshipSystem() {
     <div
       role="img"
       aria-label="A working relationship system showing trust and traction increasing through alignment, decisions, delivery and learning."
-      className="surface-depth group relative min-h-[340px] overflow-hidden rounded-[2rem] border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
+      className="surface-depth group relative min-h-[340px] overflow-hidden rounded-none border border-border/80 bg-card/85 p-6 shadow-[0_38px_95px_-58px_rgba(24,31,56,.55)] backdrop-blur-xl dark:shadow-[0_38px_95px_-58px_rgba(0,0,0,.95)] xl:p-7"
     >
       {/* Background */}
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black,transparent_86%)]" />
@@ -145,7 +145,7 @@ export function WorkingRelationshipSystem() {
               <motion.path
                 d="M 0 98 C 58 96, 80 85, 118 86 C 165 87, 179 70, 222 68 C 272 66, 291 48, 333 42 C 372 35, 392 25, 420 8"
                 fill="none"
-                stroke="rgb(0 224 92)"
+                stroke="rgb(1 230 255)"
                 strokeWidth="2.4"
                 strokeLinecap="round"
                 initial={
@@ -175,7 +175,7 @@ export function WorkingRelationshipSystem() {
             {!shouldReduceMotion && (
               <motion.span
                 aria-hidden="true"
-                className="absolute h-3 w-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_6px_rgba(0,224,92,.11),0_0_24px_rgba(0,224,92,.6)]"
+                className="absolute h-3 w-3 rounded-full border-2 border-card bg-accent shadow-[0_0_0_6px_rgba(1,230,255,.11),0_0_24px_rgba(1,230,255,.6)]"
                 animate={{
                   left: ['0%', '97%'],
                   top: ['88%', '2%'],

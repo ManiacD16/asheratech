@@ -4,6 +4,10 @@ import { Providers } from '@/app/providers';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { siteConfig } from '@/data/site';
+import '@fontsource-variable/imbue/opsz.css';
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
+import '@fontsource-variable/schibsted-grotesk';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
@@ -53,7 +57,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0b1220' },
+    { media: '(prefers-color-scheme: dark)', color: '#070526' },
   ],
 };
 
@@ -73,16 +77,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Script
-          id="preloader-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `try{if(!sessionStorage.getItem('ashera-preloader-seen')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('is-loading')}}catch(e){}`,
-          }}
-        />
         <a
           href="#main-content"
-          className="fixed left-4 top-3 z-[100] inline-flex min-h-11 -translate-y-20 items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition focus:translate-y-0"
+          className="fixed left-4 top-3 z-[100] inline-flex min-h-11 -translate-y-20 items-center bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition focus:translate-y-0"
         >
           Skip to content
         </a>

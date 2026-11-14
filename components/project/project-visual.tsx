@@ -33,7 +33,7 @@ export function ProjectVisual({
   return (
     <div
       className={cn(
-        'relative isolate flex min-h-[340px] items-center justify-center overflow-hidden rounded-[1.6rem] bg-[radial-gradient(circle_at_50%_45%,rgba(0,224,92,.08),transparent_58%)] p-3 sm:min-h-[420px] sm:p-5 dark:bg-[radial-gradient(circle_at_50%_45%,rgba(0,224,92,.07),transparent_62%)]',
+        'relative isolate flex min-h-[340px] items-center justify-center overflow-hidden rounded-none bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.08),transparent_58%)] p-3 sm:min-h-[420px] sm:p-5 dark:bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.07),transparent_62%)]',
         className,
       )}
     >
@@ -44,7 +44,7 @@ export function ProjectVisual({
         width={1536}
         height={1024}
         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 760px"
-        className="relative z-10 h-auto w-full object-contain drop-shadow-[0_28px_52px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover/project:scale-[1.025] dark:drop-shadow-[0_30px_60px_rgba(0,0,0,.32)]"
+        className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_28px_52px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover/project:scale-[1.025] dark:drop-shadow-[0_30px_60px_rgba(0,0,0,.32)]"
       />
     </div>
   );

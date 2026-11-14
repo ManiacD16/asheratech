@@ -2,12 +2,22 @@
 
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
+  // Pinned sections are measured before web fonts settle; measure again after.
+  useEffect(() => {
+    let cancelled = false;
+    document.fonts?.ready
+      .then(() => {
+        if (!cancelled) ScrollTrigger.refresh();
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   useEffect(() => {
     if (
       window.matchMedia('(prefers-reduced-motion: reduce)').matches ||

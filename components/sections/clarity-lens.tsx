@@ -24,7 +24,7 @@ export function ClarityLens() {
   return (
     <div
       aria-hidden="true"
-      className="surface-depth group relative min-h-[270px] overflow-hidden rounded-[1.8rem] border border-border/80 bg-surface/65 p-5 shadow-[0_30px_80px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_30px_80px_-55px_rgba(0,0,0,.9)]"
+      className="surface-depth group relative min-h-[270px] overflow-hidden rounded-none border border-border/80 bg-surface/65 p-5 shadow-[0_30px_80px_-55px_rgba(24,31,56,.5)] backdrop-blur-xl dark:shadow-[0_30px_80px_-55px_rgba(0,0,0,.9)]"
     >
       {/* Background */}
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-25 [mask-image:radial-gradient(circle_at_center,black,transparent_86%)]" />
@@ -129,7 +129,7 @@ export function ClarityLens() {
 
           <span className="absolute bottom-[20%] right-[20%] h-3 w-3 rounded-full border border-border bg-card" />
 
-          <span className="absolute left-1/2 top-[57%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/70 bg-accent/15 shadow-[0_0_20px_rgba(0,224,92,.18)]" />
+          <span className="absolute left-1/2 top-[57%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/70 bg-accent/15 shadow-[0_0_20px_rgba(1,230,255,.18)]" />
         </div>
 
         {/* Translation rail */}
@@ -138,7 +138,7 @@ export function ClarityLens() {
 
           {!shouldReduceMotion && (
             <motion.span
-              className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-surface bg-accent shadow-[0_0_0_4px_rgba(0,224,92,.1),0_0_18px_rgba(0,224,92,.55)]"
+              className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-surface bg-accent shadow-[0_0_0_4px_rgba(1,230,255,.1),0_0_18px_rgba(1,230,255,.55)]"
               animate={{
                 top: ['8%', '84%'],
               }}

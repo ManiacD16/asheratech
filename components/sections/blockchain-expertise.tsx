@@ -56,7 +56,7 @@ export function BlockchainExpertise() {
         fill
         sizes="100vw"
         aria-hidden="true"
-        className="pointer-events-none object-cover object-center opacity-[0.14] mix-blend-screen"
+        className="pointer-events-none object-cover object-center opacity-[0.14] mix-blend-screen hue-rotate-[58deg]"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/55 to-navy-950" />
       <div className="noise opacity-25" />
@@ -101,7 +101,7 @@ export function BlockchainExpertise() {
                 width={1672}
                 height={941}
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="relative h-auto w-full object-contain drop-shadow-[0_34px_70px_rgba(0,0,0,.5)]"
+                className="relative h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_34px_70px_rgba(0,0,0,.5)]"
               />
             </div>
           </Reveal>
@@ -119,7 +119,7 @@ export function BlockchainExpertise() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-px overflow-hidden rounded-[1.8rem] border border-white/[0.1] bg-white/[0.1] md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-none border border-white/[0.1] bg-white/[0.1] md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
           {capabilities.map((capability, index) => {
             const Icon = capability.icon;
             return (

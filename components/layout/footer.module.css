@@ -1,0 +1,237 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: var(--section-padding-block) var(--section-padding-inline)
+    var(--space-m);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Emblem ------------------------------------------------------------------ */
+
+.art {
+  position: absolute;
+  bottom: clamp(-40px, -2vw, -16px);
+  left: 50%;
+  width: min(62vw, 900px);
+  transform: translateX(-50%);
+}
+
+.illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.reveal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.artSpace {
+  height: clamp(260px, 44vw, 660px);
+}
+
+/* Intro ------------------------------------------------------------------- */
+
+.intro,
+.places,
+.contact,
+.bottom {
+  position: relative;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 9.4vw, 148px);
+  font-weight: 520;
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.tagline {
+  margin-top: var(--space-s);
+  color: var(--color-cyan);
+  font-family: var(--font-serif);
+  font-size: var(--text-title);
+  line-height: 1.05;
+}
+
+/* Place cards ------------------------------------------------------------- */
+
+.places {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-m);
+  margin-top: var(--space-xl);
+}
+
+.placeCard {
+  position: relative;
+  display: flex;
+  min-height: clamp(150px, 12vw, 176px);
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: var(--space-l);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  isolation: isolate;
+  transition: color var(--duration-base) ease 0.12s;
+}
+
+.paint {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: -1;
+  height: 0;
+  transition: height 0.62s var(--ease-in-out);
+}
+
+.paint:nth-child(1) {
+  background: var(--color-cyan);
+}
+
+.paint:nth-child(2) {
+  background: var(--color-azure);
+  transition-delay: 0.05s;
+}
+
+.paint:nth-child(3) {
+  background: var(--color-royal);
+  transition-delay: 0.1s;
+}
+
+.paint:nth-child(4) {
+  background: var(--color-violet);
+  transition-delay: 0.15s;
+}
+
+.placeCard:hover,
+.placeCard:focus-visible {
+  color: var(--color-paper);
+}
+
+.placeCard:hover .paint,
+.placeCard:focus-visible .paint {
+  height: 100%;
+}
+
+.placeDiamond {
+  position: absolute;
+  top: var(--space-l);
+  left: var(--space-l);
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: var(--color-azure);
+  transition: background var(--duration-base) ease 0.12s;
+}
+
+.placeCard:hover .placeDiamond,
+.placeCard:focus-visible .placeDiamond {
+  background: var(--color-cyan);
+}
+
+.placeLabel {
+  font-family: var(--font-serif);
+  font-size: var(--text-title);
+  line-height: 1;
+}
+
+.placeNote {
+  margin-top: 8px;
+  font-size: var(--text-label);
+  opacity: 0.72;
+}
+
+/* Contact row ------------------------------------------------------------- */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-l);
+  margin-top: var(--space-xl);
+}
+
+.contactLabel {
+  color: var(--color-muted-on-dark);
+  font-size: var(--text-label);
+}
+
+.email {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: var(--font-serif);
+  font-size: var(--text-title);
+  line-height: 1.1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  transition: text-decoration-color var(--duration-base) ease;
+}
+
+.email:hover {
+  text-decoration-color: var(--color-cyan);
+}
+
+.secondary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.secondary li + li::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: var(--space-s);
+  transform: rotate(45deg) translateY(-3px);
+  background: var(--color-cyan);
+}
+
+.secondaryLink {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-size: var(--text-body);
+  transition: color var(--duration-fast) ease;
+}
+
+.secondaryLink:hover {
+  color: var(--color-cyan);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-m);
+  color: var(--color-muted-on-dark);
+  font-size: var(--text-label);
+}
+
+.bottom .secondaryLink {
+  font-size: var(--text-label);
+}
+
+@media (max-width: 767px) {
+  .places {
+    grid-template-columns: 1fr;
+  }
+
+  .art {
+    width: 96vw;
+  }
+
+  .artSpace {
+    height: 78vw;
+  }
+}

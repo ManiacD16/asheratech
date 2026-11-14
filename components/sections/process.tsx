@@ -97,7 +97,7 @@ export function Process() {
         </div>
 
         <div className="mt-12 lg:mt-16">
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/[0.1] bg-white/[0.035] p-3 shadow-[0_38px_110px_-62px_rgba(0,0,0,.9)] sm:p-5 lg:p-7">
+          <div className="relative overflow-hidden rounded-none border border-white/[0.1] bg-white/[0.035] p-3 shadow-[0_38px_110px_-62px_rgba(0,0,0,.9)] sm:p-5 lg:p-7">
             <div className="grid-lines absolute inset-0 opacity-[0.05]" />
             <Image
               src="/images/asheratech/delivery-process.png"
@@ -105,7 +105,7 @@ export function Process() {
               width={1536}
               height={1024}
               sizes="(max-width: 1280px) 100vw, 1200px"
-              className="relative z-10 h-auto w-full object-contain"
+              className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
             />
           </div>
         </div>
@@ -126,7 +126,7 @@ export function Process() {
                 <span className="process-node absolute left-0 top-8 inline-flex h-9 w-9 items-center justify-center rounded-full border border-accent/35 bg-navy-950 text-[9px] font-bold text-signal transition duration-500 md:h-12 md:w-12">
                   {step.number}
                 </span>
-                <div className="process-panel relative overflow-hidden rounded-[1.65rem] border border-white/10 bg-white/[0.04] p-7 transition duration-700 md:p-10">
+                <div className="process-panel relative overflow-hidden rounded-none border border-white/10 bg-white/[0.04] p-7 transition duration-700 md:p-10">
                   <span
                     aria-hidden="true"
                     className="pointer-events-none absolute -bottom-[0.25em] -right-[0.02em] text-[9rem] font-semibold leading-none tracking-[-0.09em] text-white/[0.025]"
@@ -140,7 +140,7 @@ export function Process() {
                     {step.title}
                   </h3>
                 </div>
-                <div className="process-panel rounded-[1.65rem] border border-white/10 bg-white/[0.04] p-7 transition duration-700 md:p-10">
+                <div className="process-panel rounded-none border border-white/10 bg-white/[0.04] p-7 transition duration-700 md:p-10">
                   <p className="text-sm leading-7 text-white/[0.62] md:text-lg md:leading-8">
                     {step.description}
                   </p>

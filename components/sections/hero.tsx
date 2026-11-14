@@ -266,7 +266,7 @@ function HeroStage() {
       />
       <div
         aria-hidden="true"
-        className="absolute left-[17%] top-[19%] h-2 w-2 rounded-full bg-accent shadow-[0_0_0_8px_rgba(0,224,92,.07),0_0_32px_rgba(0,224,92,.42)]"
+        className="absolute left-[17%] top-[19%] h-2 w-2 rounded-full bg-accent shadow-[0_0_0_8px_rgba(1,230,255,.07),0_0_32px_rgba(1,230,255,.42)]"
       />
       <Image
         src="/images/asheratech/asheratech-signature-hero.png"

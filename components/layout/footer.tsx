@@ -1,113 +1,92 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '@/data/site';
-import { Container } from '@/components/ui/container';
-import { Logo } from '@/components/layout/logo';
+import { FooterArt } from '@/components/layout/footer-art';
+import { SplitReveal } from '@/components/motion/split-reveal';
+import styles from '@/components/layout/footer.module.css';
 
-const footerLinks = [
+const places = [
   {
-    title: 'Navigate',
-    links: [...siteConfig.navigation, { label: 'Contact', href: '/contact' }],
+    label: 'Start a project',
+    note: 'Bring the ambition, constraints and open questions.',
+    href: '/contact',
   },
   {
-    title: 'Capabilities',
-    links: [
-      { label: 'Product strategy', href: '/services#product-strategy' },
-      { label: 'Experience design', href: '/services#experience-design' },
-      { label: 'Software engineering', href: '/services#software-engineering' },
-      { label: 'Fintech & Web3', href: '/services#fintech-web3' },
-    ],
+    label: 'Selected work',
+    note: 'Product stories across payments, digital assets and mobile.',
+    href: '/work',
   },
+  {
+    label: 'Services',
+    note: 'Strategy, design, engineering and blockchain.',
+    href: '/services',
+  },
+];
+
+const secondary = [
+  { label: 'About', href: '/about' },
+  { label: 'Insights', href: '/insights' },
+  { label: 'Privacy', href: '/privacy' },
 ];
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-navy-950 text-white">
-      <div className="noise" />
-      <Container className="relative py-12 md:py-16">
-        <div className="grid gap-10 border-b border-white/15 pb-10 lg:grid-cols-[1.35fr_1fr]">
-          <div>
-            <Logo inverse />
-            <p className="mt-6 max-w-md text-base leading-7 text-white/[0.62]">
-              Strategy, experience and engineering for ambitious digital
-              products. Complex underneath. Clear where it matters.
-            </p>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              data-cursor="Email"
-              className="group mt-7 inline-flex min-h-11 items-center gap-2 text-lg font-semibold text-white transition hover:text-signal"
-            >
-              {siteConfig.email}
-              <ArrowUpRight className="h-5 w-5 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </a>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
-            {footerLinks.map((group) => (
-              <div key={group.title}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-                  {group.title}
-                </p>
-                <ul className="mt-3">
-                  {group.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="link-line inline-flex min-h-11 w-fit min-w-11 items-center text-sm text-white/[0.72] transition hover:text-signal"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="overflow-hidden border-b border-white/15 py-6 md:py-8">
-          <div
-            aria-hidden="true"
-            className="select-none whitespace-nowrap text-center text-[clamp(3.2rem,13vw,12rem)] font-semibold leading-[0.78] tracking-[-0.085em]"
+    <footer className={styles.footer}>
+      <FooterArt />
+
+      <div className={styles.intro}>
+        <h2 data-plain className={styles.title}>
+          <SplitReveal text="Complex underneath." />
+        </h2>
+        <p className={styles.tagline}>Clear where it matters.</p>
+      </div>
+
+      <nav aria-label="Footer" className={styles.places}>
+        {places.map((place) => (
+          <Link
+            key={place.href}
+            href={place.href}
+            className={styles.placeCard}
+            data-cursor="Open"
           >
-            <span className="text-white">ASHERAA</span>
-            <span className="headline-outline ![-webkit-text-stroke-color:rgba(255,255,255,.78)]">
-              TECH
-            </span>
-            <span className="text-signal">.</span>
-          </div>
+            <span className={styles.paint} aria-hidden="true" />
+            <span className={styles.paint} aria-hidden="true" />
+            <span className={styles.paint} aria-hidden="true" />
+            <span className={styles.paint} aria-hidden="true" />
+            <span className={styles.placeDiamond} aria-hidden="true" />
+            <span className={styles.placeLabel}>{place.label}</span>
+            <span className={styles.placeNote}>{place.note}</span>
+          </Link>
+        ))}
+      </nav>
+
+      <div className={styles.contact}>
+        <div>
+          <p className={styles.contactLabel}>Write to the studio</p>
+          <a href={`mailto:${siteConfig.email}`} className={styles.email}>
+            {siteConfig.email}
+          </a>
         </div>
-        <div className="flex flex-col gap-4 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
-          <p>
-            © {new Date().getFullYear()} {siteConfig.legalName}. All rights
-            reserved.
-          </p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            {/* {siteConfig.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-11 min-w-11 items-center transition hover:text-white"
-              >
-                {social.label}
-              </a>
-            ))} */}
-            <Link
-              href="/privacy"
-              className="inline-flex min-h-11 min-w-11 items-center transition hover:text-white"
-            >
-              Privacy
-            </Link>
-            <a
-              href="#main-content"
-              className="inline-flex min-h-11 min-w-11 items-center transition hover:text-white"
-            >
-              Back to top ↑
-            </a>
-          </div>
-        </div>
-      </Container>
-      <span className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
+        <ul className={styles.secondary}>
+          {secondary.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} className={styles.secondaryLink}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.artSpace} aria-hidden="true" />
+
+      <div className={styles.bottom}>
+        <p>
+          © {new Date().getFullYear()} {siteConfig.legalName}
+        </p>
+        <a href="#main-content" className={styles.secondaryLink}>
+          Back to top
+        </a>
+      </div>
     </footer>
   );
 }

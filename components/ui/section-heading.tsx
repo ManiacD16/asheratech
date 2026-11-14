@@ -21,19 +21,14 @@ export function SectionHeading({
         className,
       )}
     >
-      <span
-        className={cn(
-          'eyebrow',
-          align === 'center' && 'justify-center before:hidden',
-        )}
-      >
+      <span className={cn('eyebrow', align === 'center' && 'justify-center')}>
         {eyebrow}
       </span>
-      <h2 className="text-[clamp(2.65rem,5.7vw,5.75rem)] font-semibold leading-[0.96] tracking-[-0.06em] text-foreground">
+      <h2 className="text-[clamp(3rem,6.6vw,6.75rem)] leading-[0.88] text-foreground">
         {title}
       </h2>
       {description && (
-        <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg md:leading-9">
+        <p className="mt-6 max-w-2xl font-serif text-xl leading-[1.25] text-muted md:text-2xl md:leading-[1.22]">
           {description}
         </p>
       )}

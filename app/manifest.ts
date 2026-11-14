@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Compile complexity into progress.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#162136',
+    background_color: '#0f0b4d',
+    theme_color: '#0f0b4d',
     icons: [
       {
         src: '/icon.svg',

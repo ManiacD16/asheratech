@@ -31,7 +31,7 @@ export function Industries() {
             <DomainLeverageMap />
           </Reveal>
         </div>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-[2rem] border border-border bg-border md:grid-cols-2 lg:mt-16">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-none border border-border bg-border md:grid-cols-2 lg:mt-16">
           {industries.map((industry, index) => (
             <Reveal
               key={industry.code}

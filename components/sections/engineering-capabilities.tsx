@@ -88,8 +88,8 @@ export function EngineeringCapabilities() {
               delay={(index % 2) * 0.06}
               className="h-full"
             >
-              <article className="surface-depth group flex h-full flex-col overflow-hidden rounded-[1.8rem] border border-border bg-card transition duration-500 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-card">
-                <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_45%,rgba(0,224,92,.08),transparent_60%)] p-3 sm:min-h-[360px] sm:p-5">
+              <article className="surface-depth group flex h-full flex-col overflow-hidden rounded-none border border-border bg-card transition duration-500 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-card">
+                <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.08),transparent_60%)] p-3 sm:min-h-[360px] sm:p-5">
                   <div className="grid-lines absolute inset-0 opacity-[0.08]" />
                   <Image
                     src={capability.image}
@@ -97,7 +97,7 @@ export function EngineeringCapabilities() {
                     width={1672}
                     height={941}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="relative z-10 h-auto w-full object-contain drop-shadow-[0_26px_48px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover:scale-[1.025] dark:drop-shadow-[0_28px_56px_rgba(0,0,0,.32)]"
+                    className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_26px_48px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover:scale-[1.025] dark:drop-shadow-[0_28px_56px_rgba(0,0,0,.32)]"
                   />
                 </div>
                 <div className="border-t border-border p-6 md:p-8">
@@ -110,7 +110,7 @@ export function EngineeringCapabilities() {
                         {capability.title}
                       </h3>
                     </div>
-                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent shadow-[0_0_0_7px_rgba(0,224,92,.08)]" />
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent shadow-[0_0_0_7px_rgba(1,230,255,.08)]" />
                   </div>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-muted md:text-base">
                     {capability.description}

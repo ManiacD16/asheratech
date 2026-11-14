@@ -1,0 +1,234 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(14px, 1.4vw, 22px) var(--section-padding-inline);
+  color: var(--color-cyan);
+  pointer-events: none;
+  transition: color var(--duration-base) ease;
+}
+
+.navbar > * {
+  pointer-events: auto;
+}
+
+.onLight {
+  color: var(--color-ink);
+}
+
+.logoLink :global(img) {
+  width: clamp(40px, 3.47vw, 52px);
+}
+
+.menuButton {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin-right: -8px;
+  color: inherit;
+}
+
+.menuIcon {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 14px;
+}
+
+.menuBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transition:
+    transform var(--duration-slow) var(--ease-out),
+    top var(--duration-slow) var(--ease-out);
+}
+
+.menuBar:first-child {
+  top: 0;
+}
+
+.menuBar:last-child {
+  top: 11px;
+}
+
+.menuButton:hover .menuBar:first-child {
+  transform: translateX(5px);
+}
+
+.menuButton:hover .menuBar:last-child {
+  transform: translateX(-5px);
+}
+
+.menuButtonOpen .menuBar:first-child,
+.menuButtonOpen:hover .menuBar:first-child {
+  top: 5.5px;
+  transform: rotate(45deg);
+}
+
+.menuButtonOpen .menuBar:last-child,
+.menuButtonOpen:hover .menuBar:last-child {
+  top: 5.5px;
+  transform: rotate(-45deg);
+}
+
+/* Menu sheet ------------------------------------------------------------ */
+
+.navRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: color-mix(in srgb, var(--color-night) 62%, transparent);
+  cursor: default;
+}
+
+.navContent {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: min(100svh, max(560px, 76svh));
+  overflow: hidden;
+  color: var(--color-ink);
+}
+
+.navBg {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.cyan {
+  background: var(--color-cyan);
+}
+
+.azure {
+  background: var(--color-azure);
+}
+
+.royal {
+  background: var(--color-royal);
+}
+
+.paper {
+  background: var(--color-paper);
+}
+
+.navItems {
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  gap: var(--space-xl);
+  padding: clamp(104px, 9vw, 136px) var(--section-padding-inline)
+    var(--space-xl);
+  overflow-y: auto;
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+.navLabel {
+  color: var(--color-muted-on-light);
+  font-size: var(--text-label);
+}
+
+.navEmail {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-serif);
+  font-size: var(--text-title);
+  line-height: 1.1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  transition: text-decoration-color var(--duration-base) ease;
+}
+
+.navEmail:hover {
+  text-decoration-color: var(--color-royal);
+}
+
+.navCredit {
+  max-width: 30ch;
+  color: var(--color-muted-on-light);
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+
+.navPrimary {
+  display: flex;
+  align-items: flex-end;
+}
+
+.navPrimaryLinks {
+  display: grid;
+  gap: 0;
+}
+
+.navClip {
+  overflow: hidden;
+}
+
+.navLink {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8.4svh, 104px);
+  font-weight: 560;
+  line-height: 0.92;
+  text-transform: uppercase;
+  transition:
+    color var(--duration-base) ease,
+    transform var(--duration-slow) var(--ease-out);
+}
+
+.navLink:hover {
+  color: var(--color-royal);
+  transform: translateX(0.12em);
+}
+
+.navLinkActive {
+  color: transparent;
+  -webkit-text-stroke: 1.2px var(--color-ink);
+}
+
+.navLinkActive:hover {
+  color: transparent;
+  -webkit-text-stroke-color: var(--color-royal);
+}
+
+@media (max-width: 767px) {
+  .navContent {
+    height: 100svh;
+  }
+
+  .navItems {
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    padding-top: 108px;
+  }
+
+  .navPrimary {
+    order: -1;
+  }
+
+  .navCol {
+    gap: var(--space-m);
+  }
+}
