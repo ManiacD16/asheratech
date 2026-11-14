@@ -5,7 +5,7 @@ export const siteConfig = {
   email: 'contact@asheraatech.com',
   description:
     'A blockchain-first product and engineering agency building secure smart-contract, wallet, tokenization and digital-asset platforms, supported by modern web, mobile and cloud systems.',
-  tagline: 'Your legacy compiled into blockchain innovation.',
+  tagline: 'Your legacy compiled into innovation.',
   navigation: [
     { label: 'Work', href: '/work' },
     { label: 'Services', href: '/services' },
