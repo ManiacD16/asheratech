@@ -7,20 +7,20 @@ import styles from '@/components/home/featured.module.css';
 
 const artwork: Record<Project['visual'], { src: string; alt: string }> = {
   payments: {
-    src: '/images/asheratech/case-study-payment-platform.png',
-    alt: 'Payment operations dashboard shown on a laptop and phone.',
+    src: '/images/studio/work-payments.webp',
+    alt: 'A finance operations lead walks a colleague through payment flows on a wall display.',
   },
   assets: {
-    src: '/images/asheratech/case-study-tokenized-assets.png',
-    alt: 'Tokenized asset marketplace shown on a laptop and phone.',
+    src: '/images/studio/work-tokenized-assets.webp',
+    alt: 'An investor reviews a property holding on his phone beside an architectural model.',
   },
   health: {
-    src: '/images/asheratech/case-study-healthcare-mobile.png',
-    alt: 'Connected care mobile app screens.',
+    src: '/images/studio/work-healthcare.webp',
+    alt: 'A patient at home on a video consultation with her doctor.',
   },
   operations: {
-    src: '/images/asheratech/case-study-enterprise-platform.png',
-    alt: 'Enterprise operations platform dashboard.',
+    src: '/images/studio/work-enterprise.webp',
+    alt: 'An operations team reviews workflow status together on a shared dashboard.',
   },
 };
 
@@ -29,8 +29,8 @@ const practices = [
     title: 'Blockchain engineering',
     meta: ['Practice', 'Contracts, wallets, tokenization'],
     href: '/services#fintech-web3',
-    src: '/images/asheratech/capability-blockchain-web3.png',
-    alt: 'Diagram of connected blockchain services around a central node.',
+    src: '/images/studio/cap-blockchain.webp',
+    alt: 'A blockchain engineer reviews contract code with a hardware key in hand.',
   },
 ];
 
@@ -82,7 +82,7 @@ function Card({
               ? '(max-width: 767px) 100vw, 62vw'
               : '(max-width: 767px) 100vw, 30vw'
           }
-          className={cn(styles.image, 'brand-art')}
+          className={styles.image}
         />
       </span>
       <span className={styles.caption}>

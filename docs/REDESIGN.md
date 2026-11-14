@@ -77,13 +77,45 @@ Scroll work uses GSAP ScrollTrigger with Lenis (`lib/gsap.ts`,
   every route.
 - `.notched` (globals) – concave-corner frame used by cards and panels.
 
-## Legacy artwork
+## Imagery
 
-The PNG illustrations in `public/images/asheratech/` were drawn for the
-previous green identity and some include the old logo. They are shifted
-toward the new palette with a hue filter (`hue-rotate-[58deg]`) wherever they
-appear. Replacing them with artwork drawn for the new identity is the
-remaining step; remove the filter classes when that happens.
+All photographs live in `public/images/studio/` as WebP (1536 × 1024). They
+were generated for this site in one art direction: people at work, cool
+daylight, indigo and electric-blue light, no text or logos in frame. The
+originals are in the Figma draft "Asheraatech site imagery".
+
+| Files | Used by |
+| --- | --- |
+| `work-*.webp` | Home work grid, work index and case-study pages |
+| `cap-*.webp` | Capability cards (Services), blockchain section, home grid |
+| `studio-team.webp` | About intro |
+| `delivery-process.webp` | Process section |
+| `technology-workspace.webp` | Technology section |
+| `blockchain-ambient.webp` | Background of the blockchain section |
+
+The previous illustrations in `public/images/asheratech/` are no longer
+referenced anywhere and can be deleted.
+
+## Hero pieces
+
+`components/home/ribbon-scene.tsx` loads fifteen technology models from
+`public/models/tech/` and floats them around the ribbon: React, Next.js,
+Node.js, JavaScript, HTML, CSS, Tailwind CSS, Docker, Redis, MongoDB,
+PostgreSQL, Postman, Solidity, Ethereum and a blockchain strip. Each entry in
+the `TECHNOLOGIES` array sets a model's position (wide and narrow screens),
+size, resting angle and scroll drift; add, remove or move a piece there.
+
+The files are meshopt-compressed (about 1 MB in total, down from 18.5 MB as
+supplied). To add another model, optimise it the same way:
+
+```
+npx @gltf-transform/cli optimize in.glb public/models/tech/name.glb \
+  --compress meshopt --simplify false --palette false --instance false
+```
+
+Authors and licences are listed in `public/models/tech/CREDITS.md`.
+
+## Retired home sections
 
 The earlier home sections in `components/sections/` that the home page no
 longer imports (hero, proof-strip, selected-work, capabilities, principles,

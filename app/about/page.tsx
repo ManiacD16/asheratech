@@ -55,12 +55,12 @@ export default function AboutPage() {
         visual={
           <div className="relative overflow-hidden rounded-none border border-border bg-card/70 p-2">
             <Image
-              src="/images/asheratech/asheratech-engineering-ecosystem.png"
-              alt="AsheraTech engineering ecosystem connecting product interfaces, cloud infrastructure, identity, blockchain and tokenized assets."
-              width={1672}
-              height={941}
+              src="/images/studio/studio-team.webp"
+              alt="The studio team in conversation around a shared table."
+              width={1536}
+              height={1024}
               sizes="360px"
-              className="h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
+              className="h-auto w-full object-cover"
             />
           </div>
         }

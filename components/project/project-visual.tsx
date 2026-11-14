@@ -4,20 +4,20 @@ import { cn } from '@/lib/utils';
 
 const projectArtwork: Record<Project['visual'], { src: string; alt: string }> = {
   payments: {
-    src: '/images/asheratech/case-study-payment-platform.png',
-    alt: 'Payment operations platform interface with multi-rail payments, settlement, risk and analytics.',
+    src: '/images/studio/work-payments.webp',
+    alt: 'A finance operations lead walks a colleague through payment flows on a wall display.',
   },
   assets: {
-    src: '/images/asheratech/case-study-tokenized-assets.png',
-    alt: 'Tokenized-assets platform showing real-world assets, fractional ownership, custody and on-chain ownership.',
+    src: '/images/studio/work-tokenized-assets.webp',
+    alt: 'An investor reviews a property holding on his phone beside an architectural model.',
   },
   health: {
-    src: '/images/asheratech/case-study-healthcare-mobile.png',
-    alt: 'Healthcare mobile experience showing appointments, telehealth, medical records and health monitoring.',
+    src: '/images/studio/work-healthcare.webp',
+    alt: 'A patient at home on a video consultation with her doctor.',
   },
   operations: {
-    src: '/images/asheratech/case-study-enterprise-platform.png',
-    alt: 'Enterprise operations platform showing workflows, approvals, infrastructure, analytics and team activity.',
+    src: '/images/studio/work-enterprise.webp',
+    alt: 'An operations team reviews workflow status together on a shared dashboard.',
   },
 };
 
@@ -33,18 +33,17 @@ export function ProjectVisual({
   return (
     <div
       className={cn(
-        'relative isolate flex min-h-[340px] items-center justify-center overflow-hidden rounded-none bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.08),transparent_58%)] p-3 sm:min-h-[420px] sm:p-5 dark:bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.07),transparent_62%)]',
+        'relative isolate aspect-[3/2] overflow-hidden bg-surface',
         className,
       )}
     >
-      <div className="grid-lines absolute inset-0 opacity-[0.08] dark:opacity-[0.06]" />
       <Image
         src={artwork.src}
         alt={artwork.alt}
         width={1536}
         height={1024}
         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 760px"
-        className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_28px_52px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover/project:scale-[1.025] dark:drop-shadow-[0_30px_60px_rgba(0,0,0,.32)]"
+        className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover/project:scale-[1.04]"
       />
     </div>
   );

@@ -102,12 +102,12 @@ export function Technology() {
           <div className="surface-depth relative overflow-hidden rounded-none border border-border bg-card p-3 sm:p-5 lg:p-7">
             <div className="grid-lines absolute inset-0 opacity-[0.08]" />
             <Image
-              src="/images/asheratech/technology-ecosystem.png"
-              alt="AsheraTech technology ecosystem covering frontend, mobile, backend, blockchain, databases, DevOps, integrations, cloud and supporting services."
-              width={1672}
-              height={941}
+              src="/images/studio/technology-workspace.webp"
+              alt="Three engineers at a long desk of monitors, laptops and test devices at dusk."
+              width={1536}
+              height={1024}
               sizes="(max-width: 1280px) 100vw, 1200px"
-              className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
+              className="relative z-10 aspect-[21/9] h-auto w-full object-cover"
             />
           </div>
         </Reveal>

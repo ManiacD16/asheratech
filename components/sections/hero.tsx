@@ -269,8 +269,8 @@ function HeroStage() {
         className="absolute left-[17%] top-[19%] h-2 w-2 rounded-full bg-accent shadow-[0_0_0_8px_rgba(1,230,255,.07),0_0_32px_rgba(1,230,255,.42)]"
       />
       <Image
-        src="/images/asheratech/asheratech-signature-hero.png"
-        alt="AsheraTech technology ecosystem connecting blockchain infrastructure, identity, custody, real-world assets and digital products."
+        src="/images/studio/studio-team.webp"
+        alt="The studio team in conversation around a shared table."
         width={1536}
         height={1024}
         priority

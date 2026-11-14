@@ -807,8 +807,3 @@ html.is-loading body {
   }
 }
 
-/* Legacy illustrations were drawn in the old green palette; this shifts them
-   into the ribbon's blue range until they are redrawn. */
-.brand-art {
-  filter: hue-rotate(58deg) saturate(1.08);
-}

@@ -100,12 +100,12 @@ export function Process() {
           <div className="relative overflow-hidden rounded-none border border-white/[0.1] bg-white/[0.035] p-3 shadow-[0_38px_110px_-62px_rgba(0,0,0,.9)] sm:p-5 lg:p-7">
             <div className="grid-lines absolute inset-0 opacity-[0.05]" />
             <Image
-              src="/images/asheratech/delivery-process.png"
-              alt="AsheraTech delivery process from discovery and design through development, testing, deployment and optimization."
+              src="/images/studio/delivery-process.webp"
+              alt="A product team maps an engagement across four columns of notes on a glass wall."
               width={1536}
               height={1024}
               sizes="(max-width: 1280px) 100vw, 1200px"
-              className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08]"
+              className="relative z-10 aspect-[21/9] h-auto w-full object-cover object-[50%_35%]"
             />
           </div>
         </div>

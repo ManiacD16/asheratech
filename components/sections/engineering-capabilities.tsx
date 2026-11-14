@@ -8,55 +8,64 @@ const capabilities = [
     title: 'AI & Intelligent Automation',
     description:
       'Agentic workflows, document intelligence, predictive analytics and enterprise automation connected to real operating systems.',
-    image: '/images/asheratech/capability-ai-automation.png',
+    image: '/images/studio/cap-ai-automation.webp',
+    alt: 'An engineer directs an automated workflow shown as a node graph.',
   },
   {
     title: 'Blockchain Infrastructure & Web3 Engineering',
     description:
       'Production-grade nodes, smart contracts, custody, wallets, transaction observability and multi-chain infrastructure.',
-    image: '/images/asheratech/capability-blockchain-web3.png',
+    image: '/images/studio/cap-blockchain.webp',
+    alt: 'A blockchain engineer reviews contract code with a hardware key in hand.',
   },
   {
     title: 'Product Engineering / Full-Stack Development',
     description:
       'Frontend, backend, APIs, data, testing and deployment designed as one maintainable product system.',
-    image: '/images/asheratech/capability-product-engineering.png',
+    image: '/images/studio/cap-product-engineering.webp',
+    alt: 'Two engineers pair-program at a wide monitor.',
   },
   {
     title: 'Cloud & DevOps Infrastructure',
     description:
       'Cloud platforms, containers, orchestration, CI/CD, observability and resilient runtime infrastructure.',
-    image: '/images/asheratech/capability-cloud-devops.png',
+    image: '/images/studio/cap-cloud-devops.webp',
+    alt: 'An infrastructure engineer checks a laptop in a data-centre aisle.',
   },
   {
     title: 'Cybersecurity & Enterprise Security',
     description:
       'Identity, zero trust, encryption, threat detection, SIEM, network security and compliance built into the platform.',
-    image: '/images/asheratech/capability-cybersecurity.png',
+    image: '/images/studio/cap-cybersecurity.webp',
+    alt: 'A security analyst watches network activity across three monitors.',
   },
   {
     title: 'Digital Product Design / UI UX',
     description:
       'User flows, responsive interfaces, design systems and production-ready experiences across web and mobile.',
-    image: '/images/asheratech/capability-digital-product-design.png',
+    image: '/images/studio/cap-product-design.webp',
+    alt: 'Two designers work over wireframes, swatches and a tablet.',
   },
   {
     title: 'System Architecture & API Integration',
     description:
       'API gateways, event-driven services, data transformation and secure connections across internal and third-party systems.',
-    image: '/images/asheratech/capability-system-architecture-api.png',
+    image: '/images/studio/cap-system-architecture.webp',
+    alt: 'An architect draws a system diagram on glass with a colleague.',
   },
   {
     title: 'Mobile Application Engineering',
     description:
       'Cross-platform applications connected to secure backend services, notifications, analytics and cloud infrastructure.',
-    image: '/images/asheratech/capability-mobile-engineering.png',
+    image: '/images/studio/cap-mobile-engineering.webp',
+    alt: 'A developer tests one app across several phones and tablets.',
   },
   {
     title: 'Data Analytics & Business Intelligence',
     description:
       'Data pipelines, warehouses, real-time dashboards, predictive models and decision-ready operational intelligence.',
-    image: '/images/asheratech/capability-data-analytics-bi.png',
+    image: '/images/studio/cap-data-analytics.webp',
+    alt: 'An analyst presents charts to two colleagues.',
   },
 ] as const;
 
@@ -89,15 +98,14 @@ export function EngineeringCapabilities() {
               className="h-full"
             >
               <article className="surface-depth group flex h-full flex-col overflow-hidden rounded-none border border-border bg-card transition duration-500 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-card">
-                <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_45%,rgba(1,230,255,.08),transparent_60%)] p-3 sm:min-h-[360px] sm:p-5">
-                  <div className="grid-lines absolute inset-0 opacity-[0.08]" />
+                <div className="relative aspect-[3/2] overflow-hidden bg-surface">
                   <Image
                     src={capability.image}
-                    alt={`${capability.title} illustration`}
-                    width={1672}
-                    height={941}
+                    alt={capability.alt}
+                    width={1536}
+                    height={1024}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="relative z-10 h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_26px_48px_rgba(15,23,42,.18)] transition-transform duration-700 group-hover:scale-[1.025] dark:drop-shadow-[0_28px_56px_rgba(0,0,0,.32)]"
+                    className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]"
                   />
                 </div>
                 <div className="border-t border-border p-6 md:p-8">

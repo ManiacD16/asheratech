@@ -51,12 +51,12 @@ export function BlockchainExpertise() {
     >
       <BlockchainNetworkBackground className="opacity-45" />
       <Image
-        src="/images/asheratech/blockchain-infrastructure-ambient.png"
+        src="/images/studio/blockchain-ambient.webp"
         alt=""
         fill
         sizes="100vw"
         aria-hidden="true"
-        className="pointer-events-none object-cover object-center opacity-[0.14] mix-blend-screen hue-rotate-[58deg]"
+        className="pointer-events-none object-cover object-center opacity-40 mix-blend-screen"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/55 to-navy-950" />
       <div className="noise opacity-25" />
@@ -96,12 +96,12 @@ export function BlockchainExpertise() {
             <div className="relative mx-auto w-full max-w-[820px]">
               <div className="absolute inset-[15%] rounded-full bg-accent/10 blur-[80px]" />
               <Image
-                src="/images/asheratech/capability-blockchain-web3.png"
-                alt="Blockchain infrastructure and Web3 engineering ecosystem with validator nodes, smart contracts, wallets, APIs, observability and security."
-                width={1672}
-                height={941}
+                src="/images/studio/cap-blockchain.webp"
+                alt="A blockchain engineer reviews contract code with a hardware key in hand."
+                width={1536}
+                height={1024}
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="relative h-auto w-full object-contain hue-rotate-[58deg] saturate-[1.08] drop-shadow-[0_34px_70px_rgba(0,0,0,.5)]"
+                className="relative h-auto w-full border border-white/15 object-cover shadow-[0_34px_70px_rgba(0,0,0,.5)]"
               />
             </div>
           </Reveal>

@@ -11,6 +11,10 @@ import { LogoMark } from '@/components/layout/logo';
 import type { RibbonSceneState } from '@/components/home/ribbon-scene';
 import styles from '@/components/home/hero.module.css';
 
+// Mirrors the 3D models drawn on the canvas, for readers who cannot see it.
+const STACK =
+  'React, Next.js, Node.js, JavaScript, HTML, CSS, Tailwind CSS, Docker, Redis, MongoDB, PostgreSQL, Postman, Solidity, Ethereum and blockchain';
+
 const RibbonScene = dynamic(
   () => import('@/components/home/ribbon-scene').then((m) => m.RibbonScene),
   { ssr: false },
@@ -128,6 +132,8 @@ export function Hero() {
           </FitText>
         </h1>
       </div>
+
+      <p className="sr-only">Technologies we build with: {STACK}.</p>
 
       <div className={styles.stage} data-hero-stage>
         <div className={cn(styles.poster, sceneReady && styles.posterHidden)}>
