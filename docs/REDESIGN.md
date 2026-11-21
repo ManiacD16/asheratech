@@ -66,6 +66,26 @@ Scroll work uses GSAP ScrollTrigger with Lenis (`lib/gsap.ts`,
 `components/motion/smooth-scroll.tsx`). Pinned sections use CSS
 `position: sticky`, so they degrade to normal flow when motion is reduced.
 
+## Portfolio
+
+`data/portfolio.ts` holds the live projects from the company portfolio,
+grouped under the portfolio's eight headlines (mobile, healthcare, social and
+commerce, fintech, insurtech, mobility, blockchain and Web3, corporate). Each
+entry has its summary, scope tags, outbound links and image. Add a project
+there and it appears everywhere below.
+
+- `components/portfolio/portfolio-showcase.tsx` is the "The Portfolio"
+  section on `/work`: sector filter chips, a Gallery/Index switch, chapter
+  headers, cards that tilt toward the pointer, and an index list with a
+  preview image that trails the cursor. Every card has an anchor
+  (`/work#<slug>`).
+- The home page "Selected work" grid reads `portfolioHighlights` from the
+  same file; change that list to pick other lead projects.
+
+Project images are in `public/images/portfolio/` (1536 × 1024 WebP), made in
+the same art direction as the studio photographs. The originals are in the
+Figma draft "Asheraatech portfolio imagery".
+
 ## Shared pieces
 
 - `components/layout/header.tsx` – mark + two-bar menu button; the menu is a

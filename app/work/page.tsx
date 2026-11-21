@@ -5,11 +5,13 @@ import { Container } from '@/components/ui/container';
 import { PageIntro } from '@/components/ui/page-intro';
 import { ProjectCard } from '@/components/project/project-card';
 import { FinalCta } from '@/components/sections/final-cta';
+import { PortfolioShowcase } from '@/components/portfolio/portfolio-showcase';
+import { portfolio, portfolioCount } from '@/data/portfolio';
 
 export const metadata: Metadata = createMetadata({
   title: 'Selected Work',
   description:
-    'Explore representative product strategy, experience design and engineering engagements across fintech, Web3, mobile and enterprise platforms.',
+    'Live products designed and engineered by Asheraatech across mobile, healthcare, social commerce, fintech, insurtech, mobility, blockchain and Web3.',
   path: '/work',
 });
 
@@ -24,15 +26,25 @@ export default function WorkPage() {
             <span className="text-gradient">decisions that matter.</span>
           </>
         }
-        description="A selection of representative engagements showing how we simplify complex systems, shape useful experiences and create foundations ready to scale."
+        description={`${portfolioCount} live products across ${portfolio.length} sectors, from Google Play apps to crypto exchanges, showing how we turn complex ideas into products people use.`}
         aside={
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
             Strategy · Experience · Engineering
           </p>
         }
       />
-      <section data-chapter="Work archive" className="section-shell">
+      <PortfolioShowcase />
+      <section data-chapter="Case studies" className="section-shell">
         <Container>
+          <div className="mb-14 grid gap-6 border-b border-border pb-8 lg:grid-cols-[1fr_1fr] lg:items-end">
+            <h2 className="text-[clamp(2.6rem,5.6vw,5.5rem)] leading-[0.88]">
+              Case studies
+            </h2>
+            <p className="max-w-xl font-serif text-[clamp(1.2rem,1.7vw,1.6rem)] leading-[1.2] text-muted">
+              Deeper write-ups of how we approach a problem, shape the product
+              decisions and plan delivery.
+            </p>
+          </div>
           <div className="grid gap-x-6 gap-y-12 lg:grid-cols-2 lg:gap-y-18">
             {projects.map((project, index) => (
               <div
