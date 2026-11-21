@@ -68,23 +68,31 @@ Scroll work uses GSAP ScrollTrigger with Lenis (`lib/gsap.ts`,
 
 ## Portfolio
 
-`data/portfolio.ts` holds the live projects from the company portfolio,
-grouped under the portfolio's eight headlines (mobile, healthcare, social and
-commerce, fintech, insurtech, mobility, blockchain and Web3, corporate). Each
-entry has its summary, scope tags, outbound links and image. Add a project
-there and it appears everywhere below.
+The site presents the portfolio by sector only. It shows no product names,
+per-project details or outbound links.
+
+`data/portfolio.ts` holds the eight sectors from the company portfolio: mobile,
+healthcare, social and commerce, fintech, insurtech, mobility, blockchain and
+Web3, and corporate. Each sector has an intro, a description, a "What we build"
+list, its platforms, a live-product count and its images.
 
 - `components/portfolio/portfolio-showcase.tsx` is the "The Portfolio"
-  section on `/work`: sector filter chips, a Gallery/Index switch, chapter
-  headers, cards that tilt toward the pointer, and an index list with a
-  preview image that trails the cursor. Every card has an anchor
-  (`/work#<slug>`).
+  section on `/work`. It has sector tabs, a Gallery/Index switch and a
+  chapter per sector. Each chapter has an image gallery that cycles while on
+  screen, with clickable thumbnails, beside the sector details and a contact
+  link. Every chapter has an anchor (`/work#<sector-id>`).
 - The home page "Selected work" grid reads `portfolioHighlights` from the
-  same file; change that list to pick other lead projects.
+  same file; change that list to pick other sectors.
+- Blockchain, Web3 & Crypto is the featured sector (`featured: true`). It is
+  listed first, so it leads the work page, the tabs and the index. It renders
+  on the ink surface with the network background and a "Core specialism"
+  label. Its tab and index row carry a pulsing azure marker. Move
+  `featured` to another sector to change the emphasis.
 
-Project images are in `public/images/portfolio/` (1536 × 1024 WebP), made in
-the same art direction as the studio photographs. The originals are in the
-Figma draft "Asheraatech portfolio imagery".
+Images are in `public/images/portfolio/`, named by sector (`fintech-2.webp`).
+They are 1536 × 1024 WebP files in the same art direction as the studio
+photographs. The originals are in the Figma draft "Asheraatech portfolio
+imagery".
 
 ## Shared pieces
 

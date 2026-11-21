@@ -1,9 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { portfolioCount, portfolioHighlights } from '@/data/portfolio';
+import {
+  portfolioCount,
+  portfolioHighlights,
+  type PortfolioCategory,
+} from '@/data/portfolio';
 import { DisplayTitle } from '@/components/motion/display-title';
 import { cn } from '@/lib/utils';
 import styles from '@/components/home/featured.module.css';
+
+function productMeta(category: PortfolioCategory) {
+  const count = String(category.products).padStart(2, '0');
+  return [
+    `${count} live ${category.products === 1 ? 'product' : 'products'}`,
+    category.platforms,
+  ];
+}
 
 function Meta({ items }: { items: string[] }) {
   return (
@@ -82,8 +94,8 @@ export function Featured() {
             <span className="diamond" />
           </span>
           <p className={styles.lead}>
-            Live products across fintech, Web3, healthcare and mobile, built
-            from first idea to production.
+            Blockchain first. Exchanges, token platforms and on-chain products,
+            built from first idea to production.
           </p>
           <div className={styles.count}>
             <span className={styles.countValue}>
@@ -112,20 +124,20 @@ export function Featured() {
       <div className={styles.grid}>
         <Card
           big
-          href={`/work#${lead.slug}`}
-          title={lead.name}
-          meta={[lead.category.short, lead.kind]}
-          src={lead.image}
-          alt={lead.alt}
+          href={`/work#${lead.id}`}
+          title={lead.title}
+          meta={productMeta(lead)}
+          src={lead.images[0].src}
+          alt={lead.images[0].alt}
         />
-        {rest.map((project) => (
+        {rest.map((category) => (
           <Card
-            key={project.slug}
-            href={`/work#${project.slug}`}
-            title={project.name}
-            meta={[project.category.short, project.kind]}
-            src={project.image}
-            alt={project.alt}
+            key={category.id}
+            href={`/work#${category.id}`}
+            title={category.title}
+            meta={productMeta(category)}
+            src={category.images[0].src}
+            alt={category.images[0].alt}
           />
         ))}
         <Link href="/contact" className={styles.filler} data-cursor="Start">
